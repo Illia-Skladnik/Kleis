@@ -1,7 +1,16 @@
+<!-- eslint-disable vue/multi-word-component-names -->
+<style scoped lang="scss">
+  .home {
+    
+  }
+</style>
+
 <template>
-  <HelloWorld />
+  <main class="home">
+    Home page
+  </main>
 </template>
 
 <script setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+
 </script>
