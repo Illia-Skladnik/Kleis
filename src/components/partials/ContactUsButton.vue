@@ -8,7 +8,6 @@
     text-align: center;
     line-height: 2;
     border-radius: 30px;
-    // color: #fff;
     font-weight: 700;
   }
 </style>

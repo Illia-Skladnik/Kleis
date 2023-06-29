@@ -6,7 +6,7 @@
   .header {
     height: 844px;
     background-color: #1E2F43;
-    // position: relative;
+
     overflow: hidden;
 
 
@@ -17,8 +17,7 @@
     &__content-wrapper {
 
 
-      // position: absolute;
-      // z-index: 1;
+
     }
 
     &__logo {
@@ -49,12 +48,17 @@
     }
 
     &__background {
-      // position: absolute;
+
     }
 
     &__center-block {
       margin: 0 auto;
       width: 304px;
+
+      @include onDesktop {
+        width: 817px;
+        height: 334px;
+      }
     }
 
     &__discover-solutions {
@@ -69,6 +73,13 @@
       font-weight: 400;
       line-height: 35px;
       margin-bottom: 20px;
+
+      @include onDesktop {
+        font-size: 64px;
+        line-height: 74px;
+        width: 750px;
+        margin-bottom: 30px;
+      }
     }
 
     &__subtitle {
@@ -82,21 +93,60 @@
       font-weight: 400;
       line-height: 20px;
       margin-bottom: 79px;
+
+      @include onDesktop {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        font-size: 16px;
+      }
     }
 
     &__navigation-desktop {
-      margin: auto 0;
+      margin: 0 auto 157px;
       display: none;
       height: 69px;
       align-items: center;
+      width: 1217px;
+      padding-top: 51px;
 
       @include onDesktop {
         display: flex;
+        justify-content: space-between;
       }
     }
 
     &__right-text {
       display: flex;
+      align-items: center;
+    }
+
+    &__nav-menu {
+      margin-right: 24px;
+    }
+
+    &__contact-us {
+      margin-right: 24px;
+    }
+
+    &__buttons-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+
+      @include onDesktop {
+        width: 456px;
+      }
+    }
+
+    &__request-demo {
+      margin-right: 30px;
+      display: none;
+
+      @include onDesktop {
+        display: block;
+      };
     }
   }
 
@@ -113,14 +163,9 @@
         <Logo class="header__logo"/>
 
         <div class="header__right-text">
-
-
-          <NavMenu/>
-          <ContactUsButton/>
-
-          <!-- <div class="header__lang-toggle">
-
-          </div> -->
+          <NavMenu class="header__nav-menu"/>
+          <ContactUsButton class="header__contact-us"/>
+          <LangToggler class="header__lang-toggle"/>
         </div>
       </nav>
 
@@ -132,7 +177,11 @@
         <h3 class="header__subtitle">
           Harness the Power of Your Private AI Environment & Custom Trained AI Model for Your Needs.
         </h3>
-        <DiscoverSolutions class="header__discover-solutions"/>
+
+        <div class="header__buttons-wrapper">
+          <RequestDemo class="header__request-demo"/>
+          <DiscoverSolutions class="header__discover-solutions"/>
+        </div>
       </div>
   </header>
 </template>
@@ -141,8 +190,10 @@
 <script setup>
   import DiscoverSolutions from '@/components/partials/DiscoverSolutions.vue';
   import Logo from '@/components/partials/Logo.vue';
+  import RequestDemo from '@/components/partials/RequestDemo.vue';
   // const headerBackground = new URL('@/assets/images/bg_desktop.png', import.meta.url);
   import NavMenu from '@/components/partials/NavMenu.vue';
   import burgerMenu from '@/assets/svg/burgerMenu.svg';
   import ContactUsButton from '@/components/partials/ContactUsButton.vue';
+  import LangToggler from '@/components/partials/LangToggler.vue';
 </script>
