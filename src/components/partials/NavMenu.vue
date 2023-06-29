@@ -1,7 +1,9 @@
 <style scoped lang="scss">
   @import '@/assets/styles/variables.scss';
+
   @import '@/assets/styles/_placeholders.scss';
   @import '@/assets/styles/_mixins.scss';
+
   .menu_nav {
     list-style: none;
     @extend %d-f-c;

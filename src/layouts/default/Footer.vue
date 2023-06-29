@@ -3,10 +3,17 @@
   @import '@/assets/styles/_placeholders.scss';
   .footer {
     background: $dark;
-    .footer__grid {
+    padding: 0 0 0 24px;
+    &__grid {
       display: grid;
-      grid-template: repeat(5, 1fr) / 1fr;
-      .footer__logo-container, .footer__button-contactUs {@extend %d-f-c;}
+      grid-template: repeat(5, min-content) / 1fr;
+    }
+    &__logo-container {margin: 0 0 41px;}
+    &__button-contactUs {margin: 24px 0 81.5px;}
+
+    &__paragraph {
+      text-align: center;
+      margin: 38.5px 0;
     }
   }
 </style>
