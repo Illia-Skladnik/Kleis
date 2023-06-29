@@ -100,7 +100,7 @@
 
     &__menu-policy-contact-flex {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
 
       @include onDesktop {
         flex-direction: column;
@@ -109,10 +109,11 @@
 
     &__policy-contact-flex {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       
       @include onDesktop {
         justify-content: space-between;
+        flex-direction: row;
       }
     }
 
@@ -123,7 +124,7 @@
         margin: 0;
       }
     }
-    &__button-contactUs {
+    &__container-contactUs {
       margin: 0 0 117px 24px;
 
       @include onDesktop {
@@ -171,7 +172,7 @@
         <NavMenu class="footer__nav-menu"/>
 
         <div class="footer__policy-contact-flex">
-          <div class="footer__button-contactUs">
+          <div class="footer__container-contactUs">
             <ContactUsButton class="footer__button-contactUs"/>
           </div>
 
