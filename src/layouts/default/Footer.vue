@@ -1,43 +1,186 @@
 <style scoped lang="scss">
   @import '@/assets/styles/variables.scss';
   @import '@/assets/styles/_placeholders.scss';
+  @import '@/assets/styles/_mixins.scss';
+  // .footer {
+  //   background: $dark;
+  //   height: 1052px;
+
+  //   @include onDesktop {padding: 72px 125px 28px 167px;}
+    
+  //   &__grid {
+  //     display: grid;
+  //     grid-template: repeat(5, min-content) / 1fr;
+
+  //     @include onDesktop {
+  //       grid-template: repeat(3, min-content) / min-content 508px 1fr min-content;
+  //       grid-template-areas: 'logo . navmenu navmenu'
+  //       'logo . policy contactUs'
+  //       'copyright copyright copyright copyright';
+  //     }
+  //   }
+
+  //   &__logo-container {
+  //     margin: 0 0 41px 24px;
+  //     grid-area: logo;
+  //     @include onDesktop {margin: 0;}
+  //   }
+  //   &__button-contactUs {
+  //     margin: 0 0 117px 24px;
+  //     grid-area: contactUs;
+
+  //     @include onDesktop {
+  //       margin: 0;
+  //       width: min-content;
+  //     }
+  //   }
+
+  //   &__paragraph {
+  //     text-align: center;
+  //     margin: 0 0 77px;
+
+  //     &:first-of-type {
+  //       grid-area: policy;
+  //       font-size: 11px;
+  //       white-space: nowrap;
+  //     }
+
+  //     &:last-of-type {
+  //       margin: 0 0 83px;
+  //       grid-area: copyright;
+  //     }
+
+  //     @include onDesktop {
+  //       margin: 0;
+  //       &:last-of-type {
+  //         margin: 0;
+  //       }
+
+  //       &:first-of-type {
+  //         white-space: nowrap;
+  //         line-height: 58px;
+  //         margin: 0 45px 0 0;
+  //       }
+  //     }
+  //   }
+  //   &__nav-menu {
+  //     margin: 0 0 36px 24px;
+  //     grid-area: navmenu;
+
+  //     @include onDesktop {
+  //       margin: 0;
+  //       width: min-content;
+  //     }
+  //   }
+  // }
+
+
   .footer {
     background: $dark;
     height: 1052px;
-    
-    &__grid {
-      display: grid;
-      grid-template: repeat(5, min-content) / 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    @include onDesktop {
+      padding: 72px 125px 28px 167px;
+      height: 452px;
+      justify-content: space-between;
     }
-    &__logo-container {margin: 0 0 41px 24px;}
-    &__button-contactUs {margin: 0 0 117px 24px;}
+    
+    &__flex {
+      display: flex;
+      flex-direction: column;
+
+      @include onDesktop {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    &__menu-policy-contact-flex {
+      display: flex;
+      flex-direction: row;
+
+      @include onDesktop {
+        flex-direction: column;
+      }
+    }
+
+    &__policy-contact-flex {
+      display: flex;
+      flex-direction: row;
+      
+      @include onDesktop {
+        justify-content: space-between;
+      }
+    }
+
+    &__logo-container {
+      margin: 0 0 41px 24px;
+
+      @include onDesktop {
+        margin: 0;
+      }
+    }
+    &__button-contactUs {
+      margin: 0 0 117px 24px;
+
+      @include onDesktop {
+        margin: 0;
+        order: 2;
+      }
+    }
 
     &__paragraph {
+      
       text-align: center;
-      margin: 0 0 77px;
-      &:last-of-type {margin: 0 0 83px;}
+      &.--privacy {margin: 0 0 77px 0;}
+      &.--copyright {margin: 0 0 83px 0;}
+
+      @include onDesktop {
+        &.--privacy {
+          margin: 0;
+          font-size: 11px;
+          line-height: 58px;
+        }
+        &.--copyright {margin: 0;}
+      }
     }
-    &__nav-menu {margin: 0 0 36px 24px;}
+    &__nav-menu {
+      margin: 0 0 36px 24px;
+      grid-area: navmenu;
+
+      @include onDesktop {
+        margin: 0 0 32px 0;
+        // @include onDesktop {margin: 0 0 32px;}
+        width: min-content;
+      }
+    }
   }
 </style>
 
 <template>
   <footer class="footer">
-    <div class="footer__grid">
+    <div class="footer__flex">
       <div class="footer__logo-container">
         <Logo/>
       </div>
 
-      <NavMenu class="footer__nav-menu"/>
+      <div class="footer__menu-policy-contact-flex">
+        <NavMenu class="footer__nav-menu"/>
 
-      <div class="footer__button-contactUs">
-        <ContactUsButton/>
+        <div class="footer__policy-contact-flex">
+          <div class="footer__button-contactUs">
+            <ContactUsButton class="footer__button-contactUs"/>
+          </div>
+
+          <p class="footer__paragraph --privacy">Privacy Policy | Terms of Service</p>
+        </div>
       </div>
-
-      <p class="footer__paragraph">Privacy Policy | Terms of Service</p>
-
-      <p class="footer__paragraph">© {{copyright}} Kleis. All rights reserved.</p>
     </div>
+
+    <p class="footer__paragraph --copyright">© {{copyright}} Kleis. All rights reserved.</p>
   </footer>
 </template>
 
