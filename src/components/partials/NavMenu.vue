@@ -10,17 +10,14 @@
     flex-direction: column;
     height: 226px;
 
-    .menu_nav__item:last-of-type {
-      margin: 0;
+    .menu_nav__item{
+      &:last-of-type {margin: 0;}
+      
+      @include onDesktop {
+        margin: 0 0 0 24px;
+        &:last-of-type {margin: 0 0 0 24px;}
+      }
     }
-
-    // &__item {
-    //   margin: 12px 0;
-
-    //   @include onDesktop {
-    //     margin: 0 24px;
-    //   }
-    // }
 
     &__link {
       text-decoration: none;
@@ -29,6 +26,20 @@
 
     @include onDesktop {
       flex-direction: row;
+      height: min-content;
+      width: min-content;
+      margin: 0;
+
+      &__item {
+        margin: 0 24px 32px 0;
+
+        @include onDesktop {
+          margin: 0 24px 0 0;
+
+          &:first-of-type {margin: 0;}
+          &:last-of-type {margin: 0;}
+        }
+      }
     }
   }
 </style>
