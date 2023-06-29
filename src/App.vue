@@ -1,3 +1,17 @@
+<style scoped lang="scss">
+  * {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    resize: none;
+    font-family: 'Monda', sans-serif;
+  }
+</style>
+
 <template>
   <Header/>
   <router-view />
