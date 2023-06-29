@@ -2,20 +2,11 @@
   @import '@/assets/styles/variables.scss';
   @import '@/assets/styles/_placeholders.scss';
   .footer {
+    background: $dark;
     .footer__grid {
       display: grid;
       grid-template: repeat(5, 1fr) / 1fr;
-      .footer__menu-nav {
-        list-style: none;
-        @extend %d-f-c;
-        flex-direction: column;
-        .footer__item {
-          margin: 12px 0;
-          .footer__link {
-            text-decoration: none;
-          }
-        }
-      }
+      .footer__logo-container, .footer__button-contactUs {@extend %d-f-c;}
     }
   }
 </style>
@@ -23,39 +14,29 @@
 <template>
   <footer class="footer">
     <div class="footer__grid">
-      <Logo/>
+      <div class="footer__logo-container">
+        <Logo/>
+      </div>
 
-      <nav>
-        <menu class="footer__menu-nav">
-          <li class="footer__item">
-              <a href="#" class="footer__link">Home</a>
-          </li>
-          <li class="footer__item">
-              <a href="#" class="footer__link">Mission</a>
-          </li>
-          <li class="footer__item">
-              <a href="#" class="footer__link">Services</a>
-          </li>
-          <li class="footer__item">
-              <a href="#" class="footer__link">Industries&Vertical</a>
-          </li>
-          <li class="footer__item">
-              <a href="#" class="footer__link">Blog</a>
-          </li>
-        </menu>
-      </nav>
+      <NavMenu/>
 
-      <ContactUsButton/>
+      <div class="footer__button-contactUs">
+        <ContactUsButton/>
+      </div>
 
-      <p>Privacy Policy | Terms of Service</p>
+      <p class="footer__paragraph">Privacy Policy | Terms of Service</p>
 
-      <p>© 2023 Kleis. All rights reserved.</p>
+      <p class="footer__paragraph">© {{copyright}} Kleis. All rights reserved.</p>
     </div>
   </footer>
 </template>
 
 
 <script setup>
+  import { computed } from 'vue';
   import Logo from '@/components/partials/Logo.vue';
   import ContactUsButton from '@/components/partials/ContactUsButton.vue'
+  import NavMenu from '@/components/partials/NavMenu.vue'
+
+  const copyright = computed(() => new Date().getFullYear())
 </script>
