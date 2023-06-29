@@ -28,8 +28,8 @@
     <!-- <DiscoverSolutions/> -->
     <div class="header__content-wrapper">
       <nav>
-        <img class="header__logo" :src="logo" alt="logo">
-        <img class="header__logo" :src="burgerMenu" alt="logo">
+        <logo/>
+        <!-- <img class="header__logo" :src="burgerMenu" alt="logo"> -->
       </nav>
     </div>
 
@@ -40,6 +40,7 @@
 
 <script setup>
   import DiscoverSolutions from '@/components/partials/DiscoverSolutions.vue';
-  import logo from '@/assets/svg/logo.svg';
+  import Logo from '@/components/partials/Logo.vue';
+
   import burgerMenu from '@/assets/svg/burgerMenu.svg';
 </script>
