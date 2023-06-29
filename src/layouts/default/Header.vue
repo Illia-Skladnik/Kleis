@@ -78,7 +78,7 @@
         font-size: 64px;
         line-height: 74px;
         width: 750px;
-        margin-bottom: 30px;
+        margin: 0 auto 30px;
       }
     }
 

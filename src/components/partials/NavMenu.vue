@@ -12,7 +12,7 @@
 
     .menu_nav__item{
       &:last-of-type {margin: 0;}
-      
+
       @include onDesktop {
         margin: 0 0 0 24px;
         &:last-of-type {margin: 0 0 0 24px;}
@@ -32,6 +32,7 @@
 
       &__item {
         margin: 0 24px 32px 0;
+        position: relative;
 
         @include onDesktop {
           margin: 0 24px 0 0;
@@ -39,6 +40,22 @@
           &:first-of-type {margin: 0;}
           &:last-of-type {margin: 0;}
         }
+
+        &:hover {
+
+        }
+
+        &:hover::after {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 8px;
+          height: 3px;
+          background-color: $white;
+          left: 50%;
+          transform: translate(0, -50%, 0);
+        }
+
       }
     }
   }
