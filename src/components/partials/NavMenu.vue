@@ -1,4 +1,6 @@
 <style scoped lang="scss">
+  @import '@/assets/styles/variables.scss';
+  @import '@/assets/styles/placeholders.scss';
   .menu_nav {
     list-style: none;
     @extend %d-f-c;
