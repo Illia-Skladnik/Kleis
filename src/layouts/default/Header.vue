@@ -24,15 +24,24 @@
     &__logo {
       height: 36px;
       width: 83px;
+
+      @include onDesktop {
+        width: 160px;
+        height: 69px;
+      }
     }
 
-    &__navigation {
+    &__navigation-mobile {
       padding-top: 45px;
       margin: 0 auto;
       width: 319px;
       display: flex;
       justify-content: space-between;
       margin-bottom: 182px;
+
+      @include onDesktop {
+        display: none;
+      }
     }
 
     &__burger-img {
@@ -74,15 +83,34 @@
       line-height: 20px;
       margin-bottom: 79px;
     }
+
+    &__navigation-desktop {
+      margin: auto 0;
+      display: flex;
+      height: 69px;
+      align-items: center;
+    }
   }
 
 </style>
 
 <template>
   <header class="header">
-      <nav class="header__navigation">
+      <nav class="header__navigation-mobile">
         <Logo class="header__logo"/>
         <img class="header__burger-img" :src="burgerMenu" alt="logo">
+      </nav>
+
+      <nav class="header__navigation-desktop">
+        <Logo class="header__logo"/>
+
+        <div class="header__right-text">
+
+          <ContactUsButton/>
+          <!-- <div class="header__lang-toggle">
+
+          </div> -->
+        </div>
       </nav>
 
       <div class="header__center-block">
@@ -102,6 +130,7 @@
 <script setup>
   import DiscoverSolutions from '@/components/partials/DiscoverSolutions.vue';
   import Logo from '@/components/partials/Logo.vue';
-  const headerBackground = new URL('@/assets/images/bg_desktop.png', import.meta.url);
+  // const headerBackground = new URL('@/assets/images/bg_desktop.png', import.meta.url);
   import burgerMenu from '@/assets/svg/burgerMenu.svg';
+  import ContactUsButton from '@/components/partials/ContactUsButton.vue';
 </script>
