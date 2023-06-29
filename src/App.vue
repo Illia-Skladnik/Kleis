@@ -1,4 +1,5 @@
 <style scoped lang="scss">
+  @import '@/assets/styles/variables.scss';
   * {
     padding: 0;
     margin: 0;
@@ -9,6 +10,7 @@
     list-style: none;
     resize: none;
     font-family: 'Monda', sans-serif;
+    color: $white;
   }
 </style>
 
