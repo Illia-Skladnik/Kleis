@@ -6,20 +6,21 @@
 
   .menu_nav {
     list-style: none;
-    @extend %d-f-c;
+    @extend %d-f-sb;
     flex-direction: column;
+    height: 226px;
 
     .menu_nav__item:last-of-type {
       margin: 0;
     }
 
-    &__item {
-      margin: 12px 0;
+    // &__item {
+    //   margin: 12px 0;
 
-      @include onDesktop {
-        margin: 0 24px;
-      }
-    }
+    //   @include onDesktop {
+    //     margin: 0 24px;
+    //   }
+    // }
 
     &__link {
       text-decoration: none;

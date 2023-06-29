@@ -3,3 +3,13 @@
   align-items: center;
   justify-content: center;
 }
+
+%d-f-c-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%d-f-sb {
+  display: flex;
+  justify-content: space-between;
+}
