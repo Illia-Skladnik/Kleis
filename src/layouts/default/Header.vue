@@ -5,19 +5,10 @@
 
   .header {
     height: 844px;
-    background-color: #1E2F43;
-
-    overflow: hidden;
-
+    position: absolute;
 
     @include onDesktop {
       height: 927px;
-    }
-
-    &__content-wrapper {
-
-
-
     }
 
     &__logo {
@@ -43,12 +34,19 @@
       }
     }
 
-    &__burger-img {
-
+    &__background {
+      object-fit: cover;
+      position: absolute;
     }
 
-    &__background {
+    &__wrapper {
+      width: 100%;
+      height: 844px;
+      overflow: hidden;
+      position: relative;
 
+      display: flex;
+      justify-content: center;
     }
 
     &__center-block {
@@ -153,7 +151,9 @@
 </style>
 
 <template>
-  <header class="header">
+  <div class="header__wrapper">
+    <img :src="headerBackground" alt="background" class="header__background">
+    <header class="header">
       <nav class="header__navigation-mobile">
         <Logo class="header__logo"/>
         <img class="header__burger-img" :src="burgerMenu" alt="logo">
@@ -183,7 +183,9 @@
           <DiscoverSolutions class="header__discover-solutions"/>
         </div>
       </div>
-  </header>
+    </header>
+  </div>
+
 </template>
 
 
@@ -191,9 +193,10 @@
   import DiscoverSolutions from '@/components/partials/DiscoverSolutions.vue';
   import Logo from '@/components/partials/Logo.vue';
   import RequestDemo from '@/components/partials/RequestDemo.vue';
-  // const headerBackground = new URL('@/assets/images/bg_desktop.png', import.meta.url);
   import NavMenu from '@/components/partials/NavMenu.vue';
   import burgerMenu from '@/assets/svg/burgerMenu.svg';
   import ContactUsButton from '@/components/partials/ContactUsButton.vue';
   import LangToggler from '@/components/partials/LangToggler.vue';
+
+  const headerBackground = new URL('@/assets/images/wide/bg_desktop.png', import.meta.url);
 </script>

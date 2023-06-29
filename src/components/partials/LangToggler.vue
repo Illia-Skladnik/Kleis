@@ -24,6 +24,7 @@
       font-style: normal;
       line-height: 62px;
       padding: 0 24px;
+      cursor: pointer;
 
       &--active {
         font-weight: 700;

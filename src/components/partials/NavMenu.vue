@@ -10,12 +10,16 @@
     flex-direction: column;
     height: 226px;
 
-    .menu_nav__item{
-      &:last-of-type {margin: 0;}
+    .menu_nav__item {
+      &:last-of-type {
+        margin: 0;
+      }
 
       @include onDesktop {
         margin: 0 0 0 24px;
-        &:last-of-type {margin: 0 0 0 24px;}
+        &:last-of-type {
+          margin: 0 0 0 24px;
+        }
       }
     }
 
@@ -37,12 +41,12 @@
         @include onDesktop {
           margin: 0 24px 0 0;
 
-          &:first-of-type {margin: 0;}
-          &:last-of-type {margin: 0;}
-        }
-
-        &:hover {
-
+          &:first-of-type {
+            margin: 0;
+          }
+          &:last-of-type {
+            margin: 0;
+          }
         }
 
         &:hover::after {
@@ -52,8 +56,11 @@
           width: 8px;
           height: 3px;
           background-color: $white;
+          position: absolute;
+          bottom: 0;
           left: 50%;
-          transform: translate(0, -50%, 0);
+          transform: translateX(-50%);
+          width: 18%;
         }
 
       }
