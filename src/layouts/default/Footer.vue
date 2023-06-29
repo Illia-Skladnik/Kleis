@@ -1,6 +1,6 @@
 <style scoped lang="scss">
-  @import '../../assets/styles/variables.scss';
-  @import '../../assets/styles/_placeholders.scss';
+  @import '@/assets/styles/variables.scss';
+  @import '@/assets/styles/_placeholders.scss';
   .footer {
     background: $dark;
     .footer__grid {
