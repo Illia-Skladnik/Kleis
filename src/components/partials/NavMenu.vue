@@ -1,14 +1,31 @@
 <style scoped lang="scss">
+  @import '@/assets/styles/variables.scss';
+  @import '@/assets/styles/_placeholders.scss';
+  @import '@/assets/styles/_mixins.scss';
   .menu_nav {
     list-style: none;
     @extend %d-f-c;
     flex-direction: column;
-    .menu_nav__item {
+
+    .menu_nav__item:last-of-type {
+      margin: 0;
+    }
+
+    &__item {
       margin: 12px 0;
-      .menu_nav__link {
-        text-decoration: none;
-        color: $white;
+
+      @include onDesktop {
+        margin: 0 24px;
       }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $white;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
     }
   }
 </style>

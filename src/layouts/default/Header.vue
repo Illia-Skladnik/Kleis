@@ -86,9 +86,17 @@
 
     &__navigation-desktop {
       margin: auto 0;
-      display: flex;
+      display: none;
       height: 69px;
       align-items: center;
+
+      @include onDesktop {
+        display: flex;
+      }
+    }
+
+    &__right-text {
+      display: flex;
     }
   }
 
@@ -106,7 +114,10 @@
 
         <div class="header__right-text">
 
+
+          <NavMenu/>
           <ContactUsButton/>
+
           <!-- <div class="header__lang-toggle">
 
           </div> -->
@@ -131,6 +142,7 @@
   import DiscoverSolutions from '@/components/partials/DiscoverSolutions.vue';
   import Logo from '@/components/partials/Logo.vue';
   // const headerBackground = new URL('@/assets/images/bg_desktop.png', import.meta.url);
+  import NavMenu from '@/components/partials/NavMenu.vue';
   import burgerMenu from '@/assets/svg/burgerMenu.svg';
   import ContactUsButton from '@/components/partials/ContactUsButton.vue';
 </script>
