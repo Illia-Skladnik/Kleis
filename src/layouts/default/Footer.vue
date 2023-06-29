@@ -3,18 +3,21 @@
   @import '@/assets/styles/_placeholders.scss';
   .footer {
     background: $dark;
-    padding: 0 0 0 24px;
+    height: 1052px;
+    
     &__grid {
       display: grid;
       grid-template: repeat(5, min-content) / 1fr;
     }
-    &__logo-container {margin: 0 0 41px;}
-    &__button-contactUs {margin: 24px 0 81.5px;}
+    &__logo-container {margin: 0 0 41px 24px;}
+    &__button-contactUs {margin: 0 0 117px 24px;}
 
     &__paragraph {
       text-align: center;
-      margin: 38.5px 0;
+      margin: 0 0 77px;
+      &:last-of-type {margin: 0 0 83px;}
     }
+    &__nav-menu {margin: 0 0 36px 24px;}
   }
 </style>
 
@@ -25,7 +28,7 @@
         <Logo/>
       </div>
 
-      <NavMenu/>
+      <NavMenu class="footer__nav-menu"/>
 
       <div class="footer__button-contactUs">
         <ContactUsButton/>
