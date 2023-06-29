@@ -1,15 +1,15 @@
 <style scoped lang="scss">
   .logo {
     &__image {
-      
+
     }
   }
 </style>
 
 <template>
-  <div class="logo">
+  <!-- <div class="logo"> -->
     <img class="logo__image" :src="logo" alt="logo">
-  </div>
+  <!-- </div> -->
 </template>
 
 <script setup>

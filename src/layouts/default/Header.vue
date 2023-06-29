@@ -19,6 +19,14 @@
       height: 36px;
       width: 83px;
     }
+
+    &__navigation {
+      display: flex;
+    }
+
+    &__burger-img {
+      
+    }
   }
 
 </style>
@@ -27,9 +35,9 @@
   <header class="header">
     <!-- <DiscoverSolutions/> -->
     <div class="header__content-wrapper">
-      <nav>
-        <logo/>
-        <!-- <img class="header__logo" :src="burgerMenu" alt="logo"> -->
+      <nav class="header__navigation">
+        <Logo class="header__logo"/>
+        <img class="header__burger-img" :src="burgerMenu" alt="logo">
       </nav>
     </div>
 
