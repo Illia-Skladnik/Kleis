@@ -15,7 +15,7 @@
       height: 452px;
       justify-content: space-between;
     }
-    
+
     &__flex {
       display: flex;
       flex-direction: column;
@@ -38,7 +38,7 @@
     &__policy-contact-flex {
       display: flex;
       flex-direction: column;
-      
+
       @include onDesktop {
         justify-content: space-between;
         flex-direction: row;
@@ -62,7 +62,7 @@
     }
 
     &__paragraph {
-      
+
       text-align: center;
       &.--privacy {margin: 0 0 77px 0;}
       &.--copyright {margin: 0 0 83px 0;}

@@ -6,22 +6,19 @@
     background-color: $dark-orange;
     border-radius: 44px;
 
-    &__text {
-      font-size: 16px;
-      display: block;
-      line-height: 58px;
-      margin: 0 auto;
-      width: max-content;
+    font-size: 16px;
+    display: block;
+    line-height: 58px;
+    margin: 0 auto;
 
-      font-weight: 700;
-    }
+    font-weight: 700;
   }
 </style>
 
 <template>
-  <div class="discover-solutions">
-    <span class="discover-solutions__text">Discover Solutions</span>
-  </div>
+  <button class="discover-solutions">
+    Discover Solutions
+  </button>
 </template>
 
 
