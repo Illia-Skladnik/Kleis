@@ -58,7 +58,7 @@
       margin: 0 auto;
       width: 100%;
       max-width: fit-content;
-      margin-bottom: 9999px;
+      margin-bottom: 999px;
     }
 
     &__page {
@@ -71,6 +71,22 @@
       height: 721px;
       left: -432px;
       bottom: -711px;
+      display: none;
+
+      @include onDesktop {
+        display: block;
+      }
+    }
+
+    &__group79 {
+      display: none;
+
+      @include onDesktop {
+        position: absolute;
+        right: 182px;
+        bottom: -365px;
+        display: block;
+      }
     }
   }
 </style>
@@ -85,6 +101,7 @@
         <img :src="group78Mobile" alt="label" class="home__solutions-label--mobile home__solutions-label">
         <img :src="group78Desktop" alt="label" class="home__solutions-label--desktop home__solutions-label">
         <img :src="group77" alt="label" class="home__group77">
+        <img :src="group79" alt="label" class="home__group79">
       </div>
       <Industries class="home__industries"/>
     </div>
@@ -101,5 +118,6 @@
   const group78Mobile = new URL('@/assets/images/mobile/group92.png', import.meta.url);
   const group78Desktop = new URL('@/assets/images/desktop/group78.png', import.meta.url);
   const group77 = new URL('@/assets/images/desktop/group77.png', import.meta.url);
+  const group79 = new URL('@/assets/images/desktop/group79.png', import.meta.url);
   const ellipse = new URL('@/assets/images/ellipse3.png', import.meta.url);
 </script>
