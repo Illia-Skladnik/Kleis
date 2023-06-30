@@ -12,21 +12,33 @@
     align-items: center;
 
     @include onDesktop {
-      padding: 72px 125px 28px 167px;
-      height: 452px;
+      padding: 72px 0 28px 0;
+      // margin: 0 auto;
+      max-height: 452px;
       justify-content: space-between;
-      align-items: normal;
+      align-items: center;
+    }
+
+    &__wrapper {
+      max-width: 390px;
+      min-width: 390px;
+
+      @include onDesktop {
+        max-width: 1148px;
+        min-width: 1148px;
+      }
     }
 
     &__flex {
       display: flex;
       flex-direction: column;
-      max-width: 390px;
+      // max-width: 390px;
 
       @include onDesktop {
-        max-width: 100%;
+        max-width: 1148px;
         flex-direction: row;
         justify-content: space-between;
+        margin: 0 0 180px 0;
       }
     }
 
@@ -95,25 +107,27 @@
 
 <template>
   <footer class="footer">
-    <div class="footer__flex">
-      <div class="footer__logo-container">
-        <Logo/>
-      </div>
+    <div class="footer__wrapper">
+      <div class="footer__flex">
+        <div class="footer__logo-container">
+          <Logo/>
+        </div>
 
-      <div class="footer__menu-policy-contact-flex">
-        <NavMenu class="footer__nav-menu"/>
+        <div class="footer__menu-policy-contact-flex">
+          <NavMenu class="footer__nav-menu"/>
 
-        <div class="footer__policy-contact-flex">
-          <div class="footer__container-contactUs">
-            <ContactUsButton class="footer__button-contactUs"/>
+          <div class="footer__policy-contact-flex">
+            <div class="footer__container-contactUs">
+              <ContactUsButton class="footer__button-contactUs"/>
+            </div>
+
+            <p class="footer__paragraph --privacy">Privacy Policy | Terms of Service</p>
           </div>
-
-          <p class="footer__paragraph --privacy">Privacy Policy | Terms of Service</p>
         </div>
       </div>
-    </div>
 
-    <p class="footer__paragraph --copyright">© {{copyright}} Kleis. All rights reserved.</p>
+      <p class="footer__paragraph --copyright">© {{copyright}} Kleis. All rights reserved.</p>
+    </div>
   </footer>
 </template>
 
