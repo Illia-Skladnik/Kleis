@@ -9,18 +9,22 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
+    align-items: center;
 
     @include onDesktop {
       padding: 72px 125px 28px 167px;
       height: 452px;
       justify-content: space-between;
+      align-items: normal;
     }
 
     &__flex {
       display: flex;
       flex-direction: column;
+      max-width: 390px;
 
       @include onDesktop {
+        max-width: 100%;
         flex-direction: row;
         justify-content: space-between;
       }
