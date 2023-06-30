@@ -58,10 +58,19 @@
       margin: 0 auto;
       width: 100%;
       max-width: fit-content;
+      margin-bottom: 9999px;
     }
 
     &__page {
       overflow: hidden;
+    }
+
+    &__group77 {
+      position: absolute;
+      width: 723px;
+      height: 721px;
+      left: -432px;
+      bottom: -711px;
     }
   }
 </style>
@@ -75,6 +84,7 @@
         <Solutions class="home__solutions"/>
         <img :src="group78Mobile" alt="label" class="home__solutions-label--mobile home__solutions-label">
         <img :src="group78Desktop" alt="label" class="home__solutions-label--desktop home__solutions-label">
+        <img :src="group77" alt="label" class="home__group77">
       </div>
       <Industries class="home__industries"/>
     </div>
@@ -90,4 +100,6 @@
 
   const group78Mobile = new URL('@/assets/images/mobile/group92.png', import.meta.url);
   const group78Desktop = new URL('@/assets/images/desktop/group78.png', import.meta.url);
+  const group77 = new URL('@/assets/images/desktop/group77.png', import.meta.url);
+  const ellipse = new URL('@/assets/images/ellipse3.png', import.meta.url);
 </script>
