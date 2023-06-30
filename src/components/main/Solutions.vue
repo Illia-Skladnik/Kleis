@@ -20,7 +20,7 @@
     &__container {
       width: 100%;
       height: 100%;
-      background-color: black;
+      // background-color: black;
     }
 
     &__image {
@@ -37,6 +37,23 @@
       color: #FFF;
       margin-bottom: 44px;
     }
+
+    &__solution-title {
+      color: $white;
+
+      color: #F6F6F6;
+
+/* Kleis/H3 */
+font-size: 31.99px;
+font-family: Monda;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    }
+
+    &__solution-description {
+      color: $white;
+    }
   }
 </style>
 
@@ -47,10 +64,9 @@
       <div class="solutions__container">
         <h2 class="solutions__title">Solutions</h2>
         <div class="solutions__solution">
-          
+          <h3 class="solutions__solution-title">Individuals</h3>
+          <p class="solutions__solution-description">Embrace a future where AI is personalized just for you. Elevate your individual productivity and decision-making capabilities with a private environment and customised AI solution. Gain advanced automation in your daily tasks, while your sensitive personal data remains secure and protected.</p>
         </div>
-        <div class="solutions__solution"></div>
-        <div class="solutions__solution"></div>
       </div>
     </div>
   </div>

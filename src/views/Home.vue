@@ -17,6 +17,7 @@
     <RequestDemoBlock class="home__request-demo"/>
     <Advantages class="home__advantages"/>
     <Solutions class="home__solutions"/>
+    <Industries class="home__industries"/>
   </main>
 </template>
 
@@ -24,4 +25,5 @@
   import RequestDemoBlock from '@/components/main/RequestDemoBlock.vue';
   import Advantages from '@/components/main/Advantages.vue';
   import Solutions from '@/components/main/Solutions.vue';
+  import Industries from '@/components/main/Industries.vue';
 </script>
