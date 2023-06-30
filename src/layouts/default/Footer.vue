@@ -2,6 +2,7 @@
   @import '@/assets/styles/variables.scss';
   @import '@/assets/styles/_placeholders.scss';
   @import '@/assets/styles/_mixins.scss';
+
   .footer {
     background: $dark;
     height: 1052px;
