@@ -1,6 +1,7 @@
 <style scoped lang="scss">
   @import '@/assets/styles/variables.scss';
   @import 'https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap';
+
   * {
     padding: 0;
     margin: 0;
