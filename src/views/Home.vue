@@ -2,6 +2,8 @@
 <style scoped lang="scss">
   @import '@/assets/styles/_mixins.scss';
   .home {
+    padding-bottom: 298px;
+
     &__request-demo {
       margin: -135px auto 86px auto;
 
@@ -55,10 +57,13 @@
 
     &__solutions-wrapper {
       position: relative;
-      margin: 0 auto;
+      margin: 0 auto 361px;
       width: 100%;
       max-width: fit-content;
-      margin-bottom: 999px;
+
+      @include onDesktop {
+        margin-bottom: 388px;
+      }
     }
 
     &__page {
@@ -88,6 +93,17 @@
         display: block;
       }
     }
+
+    &__industries {
+      position: relative;
+      margin-bottom: 235px;
+    }
+
+    &__key {
+      position: relative;
+      margin: 0 auto;
+      // margin-left: 24px;
+    }
   }
 </style>
 
@@ -104,6 +120,7 @@
         <img :src="group79" alt="label" class="home__group79">
       </div>
       <Industries class="home__industries"/>
+      <KeyToBusiness class="home__key"/>
     </div>
 
   </main>
@@ -114,6 +131,7 @@
   import Advantages from '@/components/main/Advantages.vue';
   import Solutions from '@/components/main/Solutions.vue';
   import Industries from '@/components/main/Industries.vue';
+  import KeyToBusiness from '@/components/main/KeyToBusiness.vue';
 
   const group78Mobile = new URL('@/assets/images/mobile/group92.png', import.meta.url);
   const group78Desktop = new URL('@/assets/images/desktop/group78.png', import.meta.url);
