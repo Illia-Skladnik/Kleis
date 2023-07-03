@@ -1,6 +1,6 @@
 <style scoped lang="scss">
   .burger-modal {
-    
+    background-color: red;
   }
 </style>
 

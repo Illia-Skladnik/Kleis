@@ -4,10 +4,13 @@
   .navbar {
     height: 116px;
     overflow: hidden;
+    // background-color: yellow;
+    width: 100%;
 
     &__navigation-mobile {
       padding-top: 45px;
       margin: 0 auto;
+      // width: 319px;
       width: 319px;
       display: flex;
       justify-content: space-between;
@@ -56,8 +59,8 @@
     }
 
     &__background {
-      // position: relative;
-      // z-index: 2;
+      // position: absolute;
+      // z-index: -1;
     }
   }
 </style>
@@ -67,8 +70,8 @@
     <!-- <img :src="headerBackground" alt="background" class="navbar__background"> -->
     <nav v-if="!isActiveModal" class="navbar__navigation-mobile">
       <Logo class="navbar__logo"/>
-      <HeaderBurgerMenu/>
     </nav>
+    <HeaderBurgerMenu v-else/>
     <MobileMenuModal/>
 
     <nav class="navbar__navigation-desktop">
@@ -92,5 +95,5 @@
   const headerBackground = new URL('@/assets/images/wide/bg_desktop.png', import.meta.url);
   import { ref } from 'vue';
 
-  const isActiveModal = ref(false);
+  const isActiveModal = ref(true);
 </script>
