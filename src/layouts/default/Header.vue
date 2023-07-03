@@ -6,32 +6,11 @@
   .header {
     height: 844px;
     position: absolute;
+    width: 100%;
+    padding-top: 116px;
 
     @include onDesktop {
       height: 927px;
-    }
-
-    &__logo {
-      height: 36px;
-      width: 83px;
-
-      @include onDesktop {
-        width: 160px;
-        height: 69px;
-      }
-    }
-
-    &__navigation-mobile {
-      padding-top: 45px;
-      margin: 0 auto;
-      width: 319px;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 182px;
-
-      @include onDesktop {
-        display: none;
-      }
     }
 
     &__background {
@@ -101,33 +80,6 @@
       }
     }
 
-    &__navigation-desktop {
-      margin: 0 auto 157px;
-      display: none;
-      height: 69px;
-      align-items: center;
-      width: 1217px;
-      padding-top: 51px;
-
-      @include onDesktop {
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-
-    &__right-text {
-      display: flex;
-      align-items: center;
-    }
-
-    &__nav-menu {
-      margin-right: 24px;
-    }
-
-    &__contact-us {
-      margin-right: 24px;
-    }
-
     &__buttons-wrapper {
       display: flex;
       justify-content: space-between;
@@ -146,29 +98,20 @@
         display: block;
       };
     }
+
+    &__navbar {
+      position: fixed;
+      z-index: 2;
+    }
   }
 
 </style>
 
 <template>
   <div class="header__wrapper">
+    <NavBar class="header__navbar"/>
     <img :src="headerBackground" alt="background" class="header__background">
     <header class="header">
-      <nav class="header__navigation-mobile">
-        <Logo class="header__logo"/>
-        <HeaderBurgerMenu/>
-      </nav>
-
-      <nav class="header__navigation-desktop">
-        <Logo class="header__logo"/>
-
-        <div class="header__right-text">
-          <NavMenu class="header__nav-menu"/>
-          <ContactUsButton class="header__contact-us"/>
-          <LangToggler class="header__lang-toggle"/>
-        </div>
-      </nav>
-
       <div class="header__center-block">
         <h1 class="header__title">
           Empowering you with State of the Art AI
@@ -191,12 +134,8 @@
 
 <script setup>
   import DiscoverSolutions from '@/components/partials/DiscoverSolutions.vue';
-  import Logo from '@/components/partials/Logo.vue';
   import RequestDemo from '@/components/partials/RequestDemo.vue';
-  import NavMenu from '@/components/partials/NavMenu.vue';
-  import ContactUsButton from '@/components/partials/ContactUsButton.vue';
-  import LangToggler from '@/components/partials/LangToggler.vue';
-  import HeaderBurgerMenu from '../HeaderBurgerMenu.vue';
+  import NavBar from './NavBar.vue';
 
   const headerBackground = new URL('@/assets/images/wide/bg_desktop.png', import.meta.url);
 </script>
