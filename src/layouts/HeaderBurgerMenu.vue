@@ -10,14 +10,14 @@
     class="burger"
     :src="burgerMenu"
     alt="logo"
-    @click="navBarModal.toggleModal"
+    @click="handleBurgerClick"
   >
-
+  <!-- @click="navBarModal.toggleModal" -->
   <img
     v-else
     :src="CloseMenu"
     alt="close-sign"
-    @click="navBarModal.toggleModal"
+    @click="handleBurgerClick"
   >
 </template>
 
@@ -30,8 +30,8 @@
   const navBarModal = useNavBarModal();
 
   function handleBurgerClick(){
-    const modal = document.querySelector('.burger-modal')
-
-    console.log(modal)
+    navBarModal.toggleModal()
+    const htmlTag = document.documentElement
+    htmlTag.style.overflow = !navBarModal.isActiveModal ? 'visible' : 'hidden' 
   }
 </script>
