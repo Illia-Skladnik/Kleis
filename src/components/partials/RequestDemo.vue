@@ -17,11 +17,13 @@
 </style>
 
 <template>
-  <button class="request-demo">
+  <button class="request-demo" :onclick="handleClick">
     Request a demo
   </button>
 </template>
 
-<script>
-
+<script setup>
+  function handleClick(){
+    window.scrollTo({ top: document.body.clientHeight, behavior: 'smooth' })
+  }
 </script>

@@ -12,6 +12,7 @@
     align-items: center;
     position: relative;
     width: 100%;
+    scroll-behavior: smooth;
 
     @include onDesktop {
       padding: 72px 125px 28px 167px;

@@ -11,16 +11,23 @@
     line-height: 58px;
     margin: 0 auto;
 
-    font-weight: 700;
+    font-weight: 700;  
   }
 </style>
 
 <template>
-  <button class="discover-solutions">
+  <button class="discover-solutions" :onclick="handleClick">
     Discover Solutions
   </button>
 </template>
 
 
 <script setup>
+  function handleClick(){
+    const featuresHeight = document.querySelector('.advantages').clientHeight
+    const headerHeight = document.querySelector('header').clientHeight
+    const requestDemoHeight = document.querySelector('.home__request-demo').clientHeight
+    const distance = requestDemoHeight + headerHeight - featuresHeight
+    window.scrollTo({ top: distance, behavior: 'smooth' })
+  }
 </script>
