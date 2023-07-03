@@ -99,7 +99,7 @@
 
     &__industries {
       position: relative;
-      margin-bottom: 235px;
+      margin-bottom: 294px;
     }
 
     &__key {

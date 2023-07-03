@@ -6,7 +6,6 @@
   @import '@/assets/styles/mixins';
 
   .industries {
-    overflow: hidden;
 
     &__wrapper {
       max-width: 1197px;
@@ -16,21 +15,22 @@
       flex-direction: column;
       padding: 108px 0 59px 102px;
       position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100vw;
-        height: 100%;
-        left: 0;
-        top: 0;
-        z-index: 0;
-        border-radius: 30px;
-        box-shadow: -20px 20px 30px #DFE1E4;
-        background: $pale-blue;
+      
+      @include onDesktop {
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100vw;
+          height: 100%;
+          left: 0;
+          top: 0;
+          z-index: 0;
+          border-radius: 30px;
+          box-shadow: -15px 15px 30px rgba(#111, .2);
+          background: $pale-blue;
+        }
       }
     }
-
     &__h2 {
       font-size: 45px;
       margin: 0 0 60px 0;
@@ -42,13 +42,11 @@
         font-size: 48px;
       }
     }
-
     &__container {
       margin: 0 0 75px 0;
       height: 235px;
       position: relative;
     }
-    
     &__carousel {
       position: absolute;
       display: flex;
@@ -56,8 +54,8 @@
       top: 0;
       left: 0;
       min-width: 100vw;
+      overflow: hidden;
     }
-
     &__button {
       display: none;
 
@@ -74,38 +72,43 @@
         z-index: 2;
       }
     }
-
     &__item {
       margin: 0 51px 0 0;
       &:last-of-type {margin: 0;}
       max-width: 180px;
       min-width: 180px;
+      position: relative;
+      transition: .3s;
 
       @include onDesktop {
          margin: 0 63px 0 0;
          max-width: 218px;
          min-width: 218px;
       }
-   }
-   &__h3 {
+
+      @media screen and (max-width: 1700px) and (min-width: 1440px) {
+        margin: 0 51px 0 0;
+        max-width: 200px;
+        min-width: 200px;
+      }
+    }
+    &__h3 {
       font-size: 26px;
       margin: 0 0 23px 0;
 
       @include onDesktop {
-         font-size: 32px;
-         margin: 0 0 29px 0;
+          font-size: 32px;
+          margin: 0 0 29px 0;
       }
-   }
-   &__paragraph {
+    }
+    &__paragraph {
       font-size: 14px;
 
       @include onDesktop {
-         font-size: 16px;
+          font-size: 16px;
       }
-   }
-
-
-    &__arrow-right {
+    }
+    &__arrow {
       position: absolute;
       width: 70px;
       right: 44px;
@@ -115,6 +118,13 @@
         left: 0;
         transform: rotate(180deg);
       }
+
+      &--disabled {
+        opacity: .5;
+        pointer-events: none;
+      }
+
+      @include onDesktop {display: none;}
     }
   }
 </style>
@@ -127,40 +137,16 @@
       <div class="industries__container">
         <div class="industries__carousel">
 
-          <!-- <CarouselItem
+          <CarouselItem
             v-for="item, index in dataForCarousel"
             :item="item"
             :key="index"
-          /> -->
-
-          <div class="industries__item" style="{transform: translate(position + 'px', 0, 0)}" >
-            <h3 class="industries__h3">Healthcare</h3>
-            <p class="industries__paragraph">Optimize patient care, streamline workflows, and improve diagnostics.</p>
-          </div>
-
-          <div class="industries__item" style="{transform: translate(position + 'px', 0, 0)}" >
-            <h3 class="industries__h3">Education</h3>
-            <p class="industries__paragraph">Enhance learning outcomes, automate administrative tasks, and personalize student experiences</p>
-          </div>
-
-          <div class="industries__item" style="{transform: translate(position + 'px', 0, 0)}" >
-            <h3 class="industries__h3">Legal</h3>
-            <p class="industries__paragraph">Automate legal research, contract analysis, and streamline case management</p>
-          </div>
-
-          <div class="industries__item" style="{transform: translate(position + 'px', 0, 0)}" >
-            <h3 class="industries__h3">Government</h3>
-            <p class="industries__paragraph">Drive data-driven policy decisions, enhance citizen services, and improve operational efficiency</p>
-          </div>
-
-          <div class="industries__item" :style="{transform: stringPos}" >
-            <h3 class="industries__h3">Retail</h3>
-            <p class="industries__paragraph">Personalize customer experiences, optimize pricing strategies, and boost sales</p>
-          </div>
+          />
 
         </div>
-        <img class="industries__arrow-right" :src="arrowRight" alt="" @click="setPosition.plus">
-        <img class="industries__arrow-right industries__arrow-right--rotate" :src="arrowRight" alt="" @click="setPosition.minus">
+        <img ref="arrowNext" class="industries__arrow" :src="arrowRight" alt="" @click="setPosition.minus">
+        <img class="industries__arrow industries__arrow--rotate" 
+        ref="arrowPrev" :src="arrowRight" alt="" @click="setPosition.plus">
       </div>
 
       <button class="industries__button">All Industries</button>
@@ -170,37 +156,55 @@
 </template>
 
 <script setup>
-  // import CarouselItem from '../partials/CarouselItem.vue'
+  import CarouselItem from '../partials/CarouselItem.vue'
   import arrowRight from '@/assets/svg/arrowRight.svg'
-  import { ref } from 'vue'
+  import { ref } from 'vue';
 
-  // const dataForCarousel = [
-  //   {title: 'Healthcare', text: 'Optimize patient care, streamline workflows, and improve diagnostics.'},
-  //   {title: 'Education', text: 'Enhance learning outcomes, automate administrative tasks, and personalize student experiences'},
-  //   {title: 'Legal', text: 'Automate legal research, contract analysis, and streamline case management'},
-  //   {title: 'Government & Public', text: 'Drive data-driven policy decisions, enhance citizen services, and improve operational efficiency'},
-  //   {title: 'Retail & Ecommerce', text: 'Personalize customer experiences, optimize pricing strategies, and boost sales'},
-  // ]
+  const dataForCarousel = [
+    {title: 'Healthcare', text: 'Optimize patient care, streamline workflows, and improve diagnostics.'},
+    {title: 'Education', text: 'Enhance learning outcomes, automate administrative tasks, and personalize student experiences'},
+    {title: 'Legal', text: 'Automate legal research, contract analysis, and streamline case management'},
+    {title: 'Government & Public', text: 'Drive data-driven policy decisions, enhance citizen services, and improve operational efficiency'},
+    {title: 'Retail & Ecommerce', text: 'Personalize customer experiences, optimize pricing strategies, and boost sales'},
+  ]
+  
+  const arrowNext = ref(null)
+  const arrowPrev = ref(null)
 
-  let position = 0
-  // const stringPos = ref('translate(0, 0, 0)')
+  window.onload = () => setPosition.jobWithDOM()
 
   class SetPosition{
     position = 0
+    idx = 0
+    step = 180 + 39
 
     plus(){
-      position += 180
-      stringPos.value = `translate(${position}px, 0, 0)`
-      // position.value += 180
-      // console.log(position.value)
+      if(this.idx - 1 >= 0){
+        this.idx -= 1
+        this.position += this.step
+        this.jobWithDOM()
+      }
     }
 
     minus(){
-      position -= 180
-      stringPos.value = `translate(${position}px, 0, 0)`
+      if(this.idx + 1 < dataForCarousel.length){
+        this.idx += 1
+        this.position -= this.step
+        this.jobWithDOM()
+      }
     }
 
-    
+    jobWithDOM(){
+      const items = document.querySelectorAll('.industries__item')
+      items.forEach(item => item.setAttribute('style', `left: ${this.position}px;`))
+
+      if(this.idx > 0 && this.idx < dataForCarousel.length - 1){
+        arrowNext.value.classList.remove('industries__arrow--disabled')
+        arrowPrev.value.classList.remove('industries__arrow--disabled')
+      }
+      else if(this.idx === 0) arrowPrev.value.classList.add('industries__arrow--disabled')
+      else arrowNext.value.classList.add('industries__arrow--disabled')
+    }
   }
 
   const setPosition = new SetPosition()
