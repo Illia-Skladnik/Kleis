@@ -6,7 +6,6 @@
   @import '@/assets/styles/mixins';
 
   .industries {
-    overflow: hidden;
 
     &__wrapper {
       max-width: 1197px;
@@ -16,21 +15,22 @@
       flex-direction: column;
       padding: 108px 0 59px 102px;
       position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100vw;
-        height: 100%;
-        left: 0;
-        top: 0;
-        z-index: 0;
-        border-radius: 30px;
-        box-shadow: -20px 20px 30px #DFE1E4;
-        background: $pale-blue;
+      
+      @include onDesktop {
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100vw;
+          height: 100%;
+          left: 0;
+          top: 0;
+          z-index: 0;
+          border-radius: 30px;
+          box-shadow: -15px 15px 30px rgba(#111, .2);
+          background: $pale-blue;
+        }
       }
     }
-
     &__h2 {
       font-size: 45px;
       margin: 0 0 60px 0;
@@ -42,13 +42,11 @@
         font-size: 48px;
       }
     }
-
     &__container {
       margin: 0 0 75px 0;
       height: 235px;
       position: relative;
     }
-    
     &__carousel {
       position: absolute;
       display: flex;
@@ -58,7 +56,6 @@
       min-width: 100vw;
       overflow: hidden;
     }
-
     &__button {
       display: none;
 
@@ -75,7 +72,6 @@
         z-index: 2;
       }
     }
-
     &__item {
       margin: 0 51px 0 0;
       &:last-of-type {margin: 0;}
@@ -112,8 +108,6 @@
           font-size: 16px;
       }
     }
-
-
     &__arrow {
       position: absolute;
       width: 70px;
