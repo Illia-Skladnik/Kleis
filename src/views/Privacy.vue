@@ -15,11 +15,20 @@
       border-radius: 35px;
       padding: 65px 24px;
       margin-top: -118px;
-      min-height: 500px;
+      margin-bottom: 130px;
+      min-height: 1000px;
+
+      @include onDesktop {
+        min-height: 1456px;
+      }
     }
 
     &__title {
       margin-bottom: 29px;
+    }
+
+    &__key {
+      padding-bottom: 278px;
     }
   }
 </style>
@@ -35,8 +44,11 @@
         Whether you are a business seeking to optimize operations, a researcher pushing the boundaries of knowledge, or an individual looking to enhance your daily life,
       </p>
     </div>
+
+    <KeyToBusiness class="privacy__key"/>
   </div>
 </template>
 
 <script setup>
+  import KeyToBusiness from '@/components/main/KeyToBusiness.vue';
 </script>
