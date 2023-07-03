@@ -6,7 +6,7 @@
     padding: 0 20px;
 
     @include onDesktop {
-
+      padding: 0 101px;
     }
 
     &__block {

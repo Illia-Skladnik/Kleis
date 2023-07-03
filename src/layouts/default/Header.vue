@@ -105,20 +105,26 @@
       z-index: 2;
     }
 
+    &__privacy-block {
+      margin: 0 auto;
+      width: 350px;
+
+      @include onDesktop {
+        padding-left: 100px;
+        width: 100%;
+      }
+    }
+
     &__privacy-block-title {
-      // color: $white;
       font-size: 64px;
-      // font-style: normal;
+      margin-bottom: 30px;
       font-weight: 400;
-      line-height: 74px;
     }
 
     &__privacy-block-description {
       font-size: 16px;
-      font-family: Monda;
       font-style: normal;
       font-weight: 400;
-      line-height: normal;
     }
   }
 
