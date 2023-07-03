@@ -5,6 +5,7 @@
 </style>
 
 <template>
+
   <div class="burger-modal">
     This is Modal Window
   </div>
@@ -12,3 +13,4 @@
 
 <script setup>
 </script>
+
