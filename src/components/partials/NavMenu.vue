@@ -65,6 +65,10 @@
 
       }
     }
+
+    &__dark-text {
+      color: $dark-blue;
+    }
   }
 </style>
 
@@ -72,23 +76,26 @@
   <nav>
     <menu class="menu_nav">
       <li class="menu_nav__item">
-          <a href="#" class="menu_nav__link">Home</a>
+          <a href="#" class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Home</a>
       </li>
       <li class="menu_nav__item">
-          <a href="#" class="menu_nav__link">Mission</a>
+          <a href="#" class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Mission</a>
       </li>
       <li class="menu_nav__item">
-          <a href="#" class="menu_nav__link">Services</a>
+          <a href="#" class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Services</a>
       </li>
       <li class="menu_nav__item">
-          <a href="#" class="menu_nav__link">Industries&Vertical</a>
+          <a href="#" class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Industries&Vertical</a>
       </li>
       <li class="menu_nav__item">
-          <a href="#" class="menu_nav__link">Blog</a>
+          <a href="#" class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Blog</a>
       </li>
     </menu>
   </nav>
 </template>
 
 <script setup>
+  import { useNavBarModal } from '@/store/NavBarModal';
+
+  const navBarModal = useNavBarModal()
 </script>

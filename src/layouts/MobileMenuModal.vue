@@ -33,7 +33,6 @@
         <LangToggler/>
         <div class="crest">
           <HeaderBurgerMenu/>
-          <!-- <img :src="CloseMenu" alt=""> -->
         </div>
       </div>
 
@@ -50,7 +49,5 @@
   import NavMebu from '../components/partials/NavMenu.vue'
   import ContactUsButton from '@/components/partials/ContactUsButton.vue';
   import HeaderBurgerMenu from './HeaderBurgerMenu.vue';
-
-  const CloseMenu = new URL('../assets/svg/CloseMenu.svg', import.meta.url);
 </script>
 
