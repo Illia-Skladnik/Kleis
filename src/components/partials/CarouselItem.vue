@@ -33,7 +33,7 @@
 
 <template>
    <!-- <div class="industries__item" :style="transform: translate(pos, 0, 0);"> -->
-   <div class="industries__item" style="{transform: translate(100px, 0, 0)}" >
+   <div class="industries__item">
       <h3 class="industries__h3">{{ item.title }}</h3>
       <p class="industries__paragraph">{{ item.text }}</p>
    </div>
