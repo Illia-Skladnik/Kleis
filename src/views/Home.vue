@@ -3,6 +3,8 @@
   @import '@/assets/styles/_mixins.scss';
   .home {
     padding-bottom: 298px;
+    // position: relative;
+    // overflow: hidden;
 
     &__request-demo {
       margin: -135px auto 86px auto;
@@ -68,6 +70,7 @@
 
     &__page {
       overflow: hidden;
+      // width: 100vw;
     }
 
     &__group77 {
@@ -104,6 +107,21 @@
       margin: 0 auto;
       // margin-left: 24px;
     }
+
+    // &__info-label {
+    //   position: absolute;
+    //   width: 912px;
+    //   height: 721px;
+    //   left: 0;
+    //   bottom: -500px;
+
+    //   &--wrapper {
+    //     // overflow: hidden;
+    //     // background-color: red;
+    //     // width: 100%;
+    //     // height: 100px;
+    //   }
+    // }
   }
 </style>
 
@@ -137,5 +155,4 @@
   const group78Desktop = new URL('@/assets/images/desktop/group78.png', import.meta.url);
   const group77 = new URL('@/assets/images/desktop/group77.png', import.meta.url);
   const group79 = new URL('@/assets/images/desktop/group79.png', import.meta.url);
-  const ellipse = new URL('@/assets/images/ellipse3.png', import.meta.url);
 </script>

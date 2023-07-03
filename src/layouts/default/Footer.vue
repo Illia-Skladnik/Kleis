@@ -10,6 +10,8 @@
     flex-direction: column;
     justify-content: end;
     align-items: center;
+    position: relative;
+    width: 100%;
 
     @include onDesktop {
       padding: 72px 125px 28px 167px;
@@ -80,14 +82,25 @@
         &.--copyright {margin: 0;}
       }
     }
+
     &__nav-menu {
       margin: 0 0 36px 24px;
       grid-area: navmenu;
 
       @include onDesktop {
         margin: 0 0 32px 0;
-        // @include onDesktop {margin: 0 0 32px;}
         width: min-content;
+      }
+    }
+
+    &__label {
+      &--wrapper {
+        top: -257px;
+        right: 0;
+        position: absolute;
+        width: 366px;
+        height: 721;
+        overflow: hidden;
       }
     }
   }
@@ -112,8 +125,10 @@
         </div>
       </div>
     </div>
-
-    <p class="footer__paragraph --copyright">© {{copyright}} Kleis. All rights reserved.</p>
+    <p class="footer__paragraph --copyright">© {{ copyright }} Kleis. All rights reserved.</p>
+    <div class="footer__label--wrapper">
+      <InfoLabel class="footer__label"/>
+    </div>
   </footer>
 </template>
 
@@ -123,6 +138,7 @@
   import Logo from '@/components/partials/Logo.vue';
   import ContactUsButton from '@/components/partials/ContactUsButton.vue'
   import NavMenu from '@/components/partials/NavMenu.vue'
+  import InfoLabel from '@/components/footer/InfoLabel.vue'
 
   const copyright = computed(() => new Date().getFullYear())
 </script>
