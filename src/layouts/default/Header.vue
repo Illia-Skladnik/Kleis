@@ -137,8 +137,7 @@
     <header class="header">
       <div class="header__center-block" v-if="path === '/'">
         <h1 class="header__title">
-          <!-- Empowering you with State of the Art AI -->
-          {{ $t("signUp") }}
+          Empowering you with State of the Art AI
         </h1>
 
         <h3 class="header__subtitle">
