@@ -33,10 +33,11 @@
       height: min-content;
       width: min-content;
       margin: 0;
+    }
 
-      &__item {
-        margin: 0 24px 32px 0;
+    &__item {
         position: relative;
+        width: min-content;
 
         @include onDesktop {
           margin: 0 24px 0 0;
@@ -62,9 +63,7 @@
           transform: translateX(-50%);
           width: 18%;
         }
-
       }
-    }
 
     &__dark-text {
       color: $dark-blue;
