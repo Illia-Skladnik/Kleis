@@ -156,7 +156,7 @@
     <header class="header">
       <nav class="header__navigation-mobile">
         <Logo class="header__logo"/>
-        <img class="header__burger-img" :src="burgerMenu" alt="logo">
+        <HeaderBurgerMenu/>
       </nav>
 
       <nav class="header__navigation-desktop">
@@ -194,9 +194,9 @@
   import Logo from '@/components/partials/Logo.vue';
   import RequestDemo from '@/components/partials/RequestDemo.vue';
   import NavMenu from '@/components/partials/NavMenu.vue';
-  import burgerMenu from '@/assets/svg/burgerMenu.svg';
   import ContactUsButton from '@/components/partials/ContactUsButton.vue';
   import LangToggler from '@/components/partials/LangToggler.vue';
+  import HeaderBurgerMenu from '../HeaderBurgerMenu.vue';
 
   const headerBackground = new URL('@/assets/images/wide/bg_desktop.png', import.meta.url);
 </script>
