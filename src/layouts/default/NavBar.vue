@@ -2,12 +2,16 @@
   @import '@/assets/styles/_mixins.scss';
   @import '@/assets/styles/variables.scss';
   .navbar {
-    height: 116px;
-    overflow: hidden;
+    height: 86px;
     width: 100%;
+    position: relative;
+
+    @include onDesktop {
+      height: 116px;
+    }
 
     &__navigation-mobile {
-      padding-top: 45px;
+      padding-top: 23px;
       margin: 0 auto;
       width: 319px;
       display: flex;
@@ -57,16 +61,33 @@
     }
 
     &__background {
-      // position: absolute;
-      // z-index: -1;
+      height: 86px;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+
+      @include onDesktop {
+        height: 116px;
+      }
+
+    }
+
+    &__image {
+      width: 2523px;
+      height: 928px;
     }
   }
 </style>
 
 <template>
   <div class="navbar">
-    <!-- <img :src="headerBackground" alt="background" class="navbar__background"> -->
-    <nav v-if="!isActiveModal" class="navbar__navigation-mobile">
+    <div class="navbar__background">
+      <img :src="headerBackground" alt="background" class="navbar__image">
+    </div>
+    <nav v-if="!navBarModal.isActiveModal" class="navbar__navigation-mobile">
       <Logo class="navbar__logo"/>
       <HeaderBurgerMenu />
     </nav>
@@ -90,8 +111,11 @@
   import LangToggler from '@/components/partials/LangToggler.vue';
   import HeaderBurgerMenu from '../HeaderBurgerMenu.vue';
   import MobileMenuModal from '../MobileMenuModal.vue';
-  const headerBackground = new URL('@/assets/images/wide/bg_desktop.png', import.meta.url);
-  import { ref } from 'vue';
+  import { useNavBarModal } from '@/store/NavBarModal';
 
-  const isActiveModal = ref(false);
+  const navBarModal = useNavBarModal();
+  const headerBackground = new URL('@/assets/images/wide/bg_desktop.png', import.meta.url);
+  // import { ref } from 'vue';
+
+  // const isActiveModal = ref(false);
 </script>

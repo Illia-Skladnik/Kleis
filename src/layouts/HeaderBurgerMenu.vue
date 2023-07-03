@@ -2,9 +2,18 @@
 </style>
 
 <template>
-  <img class="burger" :src="burgerMenu" alt="logo">
+  <img
+    v-if="!navBarModal.isActiveModal"
+    class="burger"
+    :src="burgerMenu"
+    alt="logo"
+    @click="navBarModal.toggleModal"
+  >
 </template>
 
 <script setup>
   import burgerMenu from '@/assets/svg/burgerMenu.svg';
+  import { useNavBarModal } from '@/store/NavBarModal';
+
+  const navBarModal = useNavBarModal();
 </script>
