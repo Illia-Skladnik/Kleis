@@ -32,7 +32,8 @@
       <div class="burger-modal__lang-crest">
         <LangToggler/>
         <div class="crest">
-          <img :src="CloseMenu" alt="">
+          <HeaderBurgerMenu/>
+          <!-- <img :src="CloseMenu" alt=""> -->
         </div>
       </div>
 
@@ -48,6 +49,7 @@
   import LangToggler from '@/components/partials/LangToggler.vue';
   import NavMebu from '../components/partials/NavMenu.vue'
   import ContactUsButton from '@/components/partials/ContactUsButton.vue';
+  import HeaderBurgerMenu from './HeaderBurgerMenu.vue';
 
   const CloseMenu = new URL('../assets/svg/CloseMenu.svg', import.meta.url);
 </script>
