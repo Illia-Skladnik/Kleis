@@ -3,8 +3,6 @@
   @import '@/assets/styles/_mixins.scss';
   .home {
     padding-bottom: 298px;
-    // position: relative;
-    // overflow: hidden;
 
     &__request-demo {
       margin: -135px auto 86px auto;
@@ -23,7 +21,7 @@
     }
 
     &__solutions {
-
+      z-index: 1;
     }
 
     &__solutions-label {
@@ -33,6 +31,7 @@
 
       width: 867;
       height: 747;
+      z-index: 1;
 
       @include onDesktop {
         width: 723px;
@@ -70,7 +69,6 @@
 
     &__page {
       overflow: hidden;
-      // width: 100vw;
     }
 
     &__group77 {
@@ -105,23 +103,7 @@
     &__key {
       position: relative;
       margin: 0 auto;
-      // margin-left: 24px;
     }
-
-    // &__info-label {
-    //   position: absolute;
-    //   width: 912px;
-    //   height: 721px;
-    //   left: 0;
-    //   bottom: -500px;
-
-    //   &--wrapper {
-    //     // overflow: hidden;
-    //     // background-color: red;
-    //     // width: 100%;
-    //     // height: 100px;
-    //   }
-    // }
   }
 </style>
 

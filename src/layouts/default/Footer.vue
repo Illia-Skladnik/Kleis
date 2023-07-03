@@ -94,15 +94,28 @@
     }
 
     &__label {
+      @include onDesktop {
+        right: -50%;
+      }
+
       &--wrapper {
-        top: -257px;
+        top: -277px;
         right: 0;
         position: absolute;
         width: 366px;
         height: 721;
         overflow: hidden;
+
+        @include onDesktop {
+          top: -580px;
+
+          height: 580px;
+          width: 100%;
+        }
       }
     }
+
+
   }
 </style>
 

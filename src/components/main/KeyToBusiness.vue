@@ -2,7 +2,13 @@
   @import '@/assets/styles/variables.scss';
   @import '@/assets/styles/_mixins.scss';
   .key {
-    width: 342px;
+
+    &--wrapper {
+      max-width: 1322px;
+      padding-left: 24px;
+    }
+
+    // width: 342px;
 
     @include onDesktop {
       width: 1233px;
@@ -33,9 +39,11 @@
 </style>
 
 <template>
-  <div class="key">
-    <h2 class="key__title">Be the key<br>to your business.</h2>
-    <p class="key__description">Interested in learning more about how a private environment and custom trained AI models can fuel your future?<br>Contact us today.</p>
+  <div class="key--wrapper">
+    <div class="key">
+      <h2 class="key__title">Be the key<br>to your business.</h2>
+      <p class="key__description">Interested in learning more about how a private environment and custom trained AI models can fuel your future?<br>Contact us today.</p>
+    </div>
   </div>
 </template>
 

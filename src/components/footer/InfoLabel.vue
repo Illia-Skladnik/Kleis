@@ -1,4 +1,5 @@
 <style scoped lang="scss">
+  @import '@/assets/styles/variables.scss';
   .info {
     position: relative;
 
@@ -13,6 +14,19 @@
       top: 39px;
       left: 39px;
     }
+
+    &__link {
+      position: absolute;
+      top: 85px;
+      left: 39px;
+
+      color: $dark-blue;
+      font-size: 33px;
+      font-family: 'Monda', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      text-decoration-line: underline;
+    }
   }
 </style>
 
@@ -20,7 +34,7 @@
   <div class="info">
     <img class="info__label" :src="label" alt="label">
     <img :src="messageSign" alt="message" class="info__msg-sign">
-    <link rel="info@kleis.com" href="info@kleis.com">
+    <span class="info__link">info@kleis.com</span>
   </div>
 </template>
 
