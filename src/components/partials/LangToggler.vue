@@ -46,15 +46,16 @@
       v-if="isActiveModal"
       class="lang-toggler__languages"
     >
-      <span
+      <div
         class="lang-toggler__language"
         @click="deactivateModal(language)"
         v-for="language, index in languages"
         :class="currentLang === language ? 'lang-toggler__language--active' : ''"
         :key="index"
       >
-        {{ language }}
-      </span>
+        <span @click="switchLang">{{ language }}</span>
+
+      </div>
     </div>
   </div>
 </template>
@@ -64,11 +65,9 @@
   import { useNavBarModal } from '@/store/NavBarModal';
   import dropdownBtnDown from '@/assets/svg/dropdownBtnDown.svg';
   import dropdownBtnDark from '@/assets/svg/arrowDownBlack.svg'
-  
+
   const navBarModal = useNavBarModal()
   const arrowColor = computed(() => navBarModal.isActiveModal ? dropdownBtnDark : dropdownBtnDown)
-
-  const arrowDown = new URL('../../assets/svg/arrowDown.svg', import.meta.url)
 
   const languages = ['English', 'French'];
   const isActiveModal = ref(false);
