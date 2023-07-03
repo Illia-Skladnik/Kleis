@@ -53,8 +53,19 @@
       }
     }
 
+    // &__logo {
+    //   display: block;
+    //   width: 188px;
+    //   height: 122px;
+      
+    // }
+
     &__logo-container {
-      margin: 0 0 41px 24px;
+      margin: 0 0 41px 10px;
+      .logo {
+        width: 188px;
+        height: 122px;
+      }
 
       @include onDesktop {
         margin: 0;

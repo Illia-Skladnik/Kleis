@@ -32,6 +32,9 @@
     &__center-block {
       margin: 0 auto;
       width: 304px;
+      height: 334px;
+      position: relative;
+      
 
       @include onDesktop {
         width: 817px;

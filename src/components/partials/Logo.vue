@@ -1,14 +1,13 @@
 <style scoped lang="scss">
   .logo {
-    height: 36px;
-    width: 83px;
     position: relative;
+    display: block;
 
     &__image {
       position: absolute;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: scale-down;
     }
   }
 </style>
