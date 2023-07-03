@@ -30,14 +30,16 @@
         font-weight: 700;
       }
     }
+
+    &__dark-text {color: $dark-blue;}
   }
 </style>
 
 <template>
   <div class="lang-toggler">
-    <button @click="activateModal" class="lang-toggler__curent-lang">
+    <button @click="activateModal" class="lang-toggler__curent-lang" :class="navBarModal.isActiveModal ? 'lang-toggler__dark-text' : ''">
       {{ currentLang }}
-      <img :src="dropdownBtnDown" alt="arrow">
+      <img :src="arrowColor" alt="arrow">
     </button>
 
     <div
@@ -58,12 +60,19 @@
 </template>
 
 <script setup>
-  import { ref, onBeforeUnmount, onMounted } from 'vue';
+  import { ref, onBeforeUnmount, onMounted, computed } from 'vue';
+  import { useNavBarModal } from '@/store/NavBarModal';
   import dropdownBtnDown from '@/assets/svg/dropdownBtnDown.svg';
+  import dropdownBtnDark from '@/assets/svg/arrowDownBlack.svg'
+  
+  const navBarModal = useNavBarModal()
+  const arrowColor = computed(() => navBarModal.isActiveModal ? dropdownBtnDark : dropdownBtnDown)
+
+  const arrowDown = new URL('../../assets/svg/arrowDown.svg', import.meta.url)
 
   const languages = ['English', 'French'];
   const isActiveModal = ref(false);
-  const activateModal = () => isActiveModal.value = true;
+  const activateModal = () => isActiveModal.value = !isActiveModal.value;
   const deactivateModal = (language) => {
     isActiveModal.value = false
     currentLang.value = language;

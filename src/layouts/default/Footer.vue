@@ -24,7 +24,7 @@
     &__flex {
       display: flex;
       flex-direction: column;
-      max-width: 390px;
+      width: 390px;
 
       @include onDesktop {
         max-width: 100%;
