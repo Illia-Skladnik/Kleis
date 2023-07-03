@@ -102,7 +102,7 @@
 
     &__navbar {
       position: fixed;
-      z-index: 2;
+      z-index: 3;
     }
 
     &__privacy-block {

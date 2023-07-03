@@ -12,6 +12,7 @@
     font-family: 'Monda', sans-serif;
     color: $white;
   }
+  body {overflow: hidden;}
 </style>
 
 <template>
