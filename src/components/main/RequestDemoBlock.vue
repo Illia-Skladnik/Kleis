@@ -13,12 +13,12 @@
     &__button {
       position: absolute;
       left: 21px;
-      top: 283px;
+      top: 323px;
       width: 210px;
 
       @include onDesktop {
         left: 94px;
-        top: 370px;
+        top: 340px;
       }
     }
 
