@@ -34,6 +34,4 @@
 
     console.log(modal)
   }
-
-
 </script>
