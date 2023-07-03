@@ -7,10 +7,11 @@
     height: 844px;
     position: absolute;
     width: 100%;
-    padding-top: 116px;
+    padding-top: 273px;
 
     @include onDesktop {
       height: 927px;
+      padding-top: 288px;
     }
 
     &__background {
@@ -103,6 +104,22 @@
       position: fixed;
       z-index: 2;
     }
+
+    &__privacy-block-title {
+      // color: $white;
+      font-size: 64px;
+      // font-style: normal;
+      font-weight: 400;
+      line-height: 74px;
+    }
+
+    &__privacy-block-description {
+      font-size: 16px;
+      font-family: Monda;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
   }
 
 </style>
@@ -112,7 +129,7 @@
     <NavBar class="header__navbar"/>
     <img :src="headerBackground" alt="background" class="header__background">
     <header class="header">
-      <div class="header__center-block">
+      <div class="header__center-block" v-if="path === '/'">
         <h1 class="header__title">
           Empowering you with State of the Art AI
         </h1>
@@ -126,6 +143,11 @@
           <DiscoverSolutions class="header__discover-solutions"/>
         </div>
       </div>
+
+      <div class="header__privacy-block" v-if="path === '/privacy'">
+        <h1 class="header__privacy-block-title">Legal</h1>
+        <span class="header__privacy-block-description">And Privacy policy</span>
+      </div>
     </header>
   </div>
 
@@ -136,6 +158,10 @@
   import DiscoverSolutions from '@/components/partials/DiscoverSolutions.vue';
   import RequestDemo from '@/components/partials/RequestDemo.vue';
   import NavBar from './NavBar.vue';
+  import {useRoute} from 'vue-router'
+  import {computed} from 'vue'
 
   const headerBackground = new URL('@/assets/images/wide/bg_desktop.png', import.meta.url);
+  const route = useRoute();
+  const path = computed(() => route.path);
 </script>

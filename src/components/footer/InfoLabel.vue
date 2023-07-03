@@ -34,7 +34,7 @@
   <div class="info">
     <img class="info__label" :src="label" alt="label">
     <img :src="messageSign" alt="message" class="info__msg-sign">
-    <span class="info__link">info@kleis.com</span>
+    <router-link to="/privacy" class="info__link">info@kleis.com</router-link>
   </div>
 </template>
 
