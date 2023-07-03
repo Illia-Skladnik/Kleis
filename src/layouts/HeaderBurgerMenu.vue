@@ -23,9 +23,4 @@
 
     console.log(modal)
   }
-
-  
-
-  
-
 </script>

@@ -17,7 +17,10 @@
       margin: 0 0 204px 0;
     }
 
-    .nav-menu__at-modal {margin: 0 0 41px 0;}
+    .nav-menu__at-modal {
+      margin: 0 0 41px 0;
+      color: $dark-blue;
+    }
   }
 </style>
 
