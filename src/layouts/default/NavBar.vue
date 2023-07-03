@@ -93,5 +93,5 @@
   const headerBackground = new URL('@/assets/images/wide/bg_desktop.png', import.meta.url);
   import { ref } from 'vue';
 
-  const isActiveModal = ref(false);
+  const isActiveModal = ref(true);
 </script>
