@@ -1,4 +1,7 @@
 <style scoped lang="scss">
+  .class {
+
+  }
 </style>
 
 <template>
@@ -10,12 +13,20 @@
     @click="navBarModal.toggleModal"
   >
 
+  <img
+    v-else
+    :src="CloseMenu"
+    alt="close-sign"
+    @click="navBarModal.toggleModal"
+  >
 </template>
 
 <script setup>
   import burgerMenu from '@/assets/svg/burgerMenu.svg';
+  import CloseMenu from '@/assets/svg/CloseMenu.svg';
+
   import { useNavBarModal } from '@/store/NavBarModal';
-  
+
   const navBarModal = useNavBarModal();
 
   function handleBurgerClick(){
@@ -24,8 +35,5 @@
     console.log(modal)
   }
 
-  
-
-  
 
 </script>
