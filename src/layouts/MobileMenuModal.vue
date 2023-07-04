@@ -45,7 +45,6 @@
 </template>
 
 <script setup>
-  import LangToggler from '@/components/partials/LangToggler.vue';
   import NavMebu from '../components/partials/NavMenu.vue'
   import ContactUsButton from '@/components/partials/ContactUsButton.vue';
   import HeaderBurgerMenu from './HeaderBurgerMenu.vue';
