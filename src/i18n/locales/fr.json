@@ -1,0 +1,11 @@
+{
+  "locale": {
+    "en": "Anglais",
+    "fr": "Français"
+  },
+  "requestDemo": {
+    "from": "From Individuals to Fortune 500 companies, ",
+    "company": "{company}",
+    "revolutionise": " empowers you to revolutionise you."
+  }
+}

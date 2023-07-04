@@ -67,9 +67,9 @@
     <img :src="group57" alt="image" class="request-demo__image--desktop"/>
     <RequestDemo class="request-demo__button"/>
     <div class="request-demo__text">
-      <span>From Individuals to Fortune 500 companies, </span>
-      <span class="request-demo__text--orange">Kleis</span>
-      <span> empowers you to revolutionise you.</span>
+      <span> {{ $t("requestDemo.from") }}</span>
+      <span class="request-demo__text--orange">{{ $t("requestDemo.company", { company: "Kleis"}) }}</span>
+      <span> {{ $t("requestDemo.revolutionise") }} </span>
     </div>
   </div>
 </template>

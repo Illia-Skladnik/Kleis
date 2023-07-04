@@ -30,7 +30,7 @@
     <div class="burger-modal__wrapper">
 
       <div class="burger-modal__lang-crest">
-        <LangToggler/>
+        <LanguageSwitcher/>
         <div class="crest">
           <HeaderBurgerMenu/>
         </div>
@@ -49,5 +49,6 @@
   import NavMebu from '../components/partials/NavMenu.vue'
   import ContactUsButton from '@/components/partials/ContactUsButton.vue';
   import HeaderBurgerMenu from './HeaderBurgerMenu.vue';
+  import LanguageSwitcher from '@/components/partials/LanguageSwitcher.vue';
 </script>
 

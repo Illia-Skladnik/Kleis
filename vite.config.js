@@ -5,12 +5,18 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 // Utilities
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
+import { resolve, dirname } from 'node:path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue({ 
+    vue({
       template: { transformAssetUrls }
+    }),
+    VueI18nPlugin({
+      runtimeOnly: false,
+      include: resolve(dirname(fileURLToPath(import.meta.url)), './src/i18n/locales/**'),
     }),
     // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
     vuetify({

@@ -98,7 +98,8 @@
       <div class="navbar__right-text">
         <NavMenu class="navbar__nav-menu"/>
         <ContactUsButton class="navbar__contact-us"/>
-        <LangToggler class="navbar__lang-toggle"/>
+        <!-- <LangToggler class="navbar__lang-toggle"/> -->
+        <LanguageSwitcher class="navbar__lang-toggle"/>
       </div>
     </nav>
   </div>
@@ -108,7 +109,8 @@
   import Logo from '@/components/partials/Logo.vue';
   import NavMenu from '@/components/partials/NavMenu.vue';
   import ContactUsButton from '@/components/partials/ContactUsButton.vue';
-  import LangToggler from '@/components/partials/LangToggler.vue';
+  // import LangToggler from '@/components/partials/LangToggler.vue';
+  import LanguageSwitcher from '@/components/partials/LanguageSwitcher.vue';
   import HeaderBurgerMenu from '../HeaderBurgerMenu.vue';
   import MobileMenuModal from '../MobileMenuModal.vue';
   import { useNavBarModal } from '@/store/NavBarModal';

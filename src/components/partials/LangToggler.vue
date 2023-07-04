@@ -62,9 +62,9 @@
 
 <script setup>
   import { ref, onBeforeUnmount, onMounted, computed } from 'vue';
-  import { useNavBarModal } from '@/store/NavBarModal';
   import dropdownBtnDown from '@/assets/svg/dropdownBtnDown.svg';
   import dropdownBtnDark from '@/assets/svg/arrowDownBlack.svg'
+  import { useNavBarModal } from '@/store/NavBarModal';
 
   const navBarModal = useNavBarModal()
   const arrowColor = computed(() => navBarModal.isActiveModal ? dropdownBtnDark : dropdownBtnDown)
@@ -94,3 +94,25 @@
     }
   }
 </script>
+
+<!-- <script>
+  import { useI18n } from 'vue-i18n'
+  import Tr from "@/i18n/translation"
+
+  export default {
+    setup() {
+      const { t, locale } = useI18n()
+
+      const supportedLocales = Tr.supportedLocales
+
+      const switchLanguage = async (event) => {
+        const newLocale = event.target.value
+
+        await Tr.switchLanguage(newLocale)
+
+      }
+
+      return { t, locale, supportedLocales, switchLanguage }
+    }
+  }
+</script> -->
