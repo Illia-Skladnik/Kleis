@@ -29,10 +29,6 @@ body {
 		transform: scaleY(1);
 	}
 
-	// &__switch:checked + &__options-filter &__filter:after {
-	// 	transform: rotate(-135deg);
-	// }
-
 	&__options-filter {
     width: 100%;
     cursor: pointer;
@@ -51,6 +47,8 @@ body {
     &--black {
       color: $black;
     }
+
+
   }
 
   &__select {
@@ -100,7 +98,9 @@ nav ul, li {
       class="dropdown__filter"
       role="listbox"
       tabindex="-1"
-      :style="{ 'background-image': `url(${arrowColor})` }"
+      :style="{
+        'background-image': `url(${arrowColor})`
+      }"
       :class="navBarModal.isActiveModal ? 'dropdown__filter--black' : ''"
     >
 			<li class="dropdown__filter-selected" aria-selected="true">

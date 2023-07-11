@@ -1,23 +1,20 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import Default from '@/layouts/default/Default.vue';
 
 const routes = [
   {
     path: '/',
-    component: () => Default,
+    component: () => import('@/layouts/default/Default.vue'),
     children: [
       {
         path: '/',
         name: 'Home',
-        component: () => Home,
+        component: () => import('@/views/Home.vue'),
       },
       {
         path: '/privacy',
         name: 'Privacy',
-        component: () => import(/* webpackChunkName: "home" */ '@/views/Privacy.vue'),
-        // component: () => Home,
+        component: () => import('@/views/Privacy.vue'),
       },
     ],
   },
