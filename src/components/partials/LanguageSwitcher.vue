@@ -2,23 +2,23 @@
   @import '@/assets/styles/variables.scss';
 
 html {
-  box-sizing: border-box;
-  font-size: 62.5%;
+  // box-sizing: border-box;
+  // font-size: 62.5%;
 
   *,
   *:before,
   *:after {
-    box-sizing: inherit;
+    // box-sizing: inherit;
   }
 }
 
 body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
-	height: 100vh;
-	background-color: #98DFFD;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	// width: 100vw;
+	// height: 100vh;
+	// background-color: #98DFFD;
 }
 
 .dropdown {
