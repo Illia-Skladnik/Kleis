@@ -5,7 +5,6 @@
 
   .solutions {
     max-width: 1197px;
-    // margin: 0 auto;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -66,6 +65,10 @@
 
       color: $light-grey;
       margin-bottom: 44px;
+
+      @include onDesktop {
+        padding-left: 94px;
+      }
     }
 
     &__solution-title {
