@@ -15,7 +15,7 @@
       flex-direction: column;
       padding: 108px 0 59px 102px;
       position: relative;
-      
+
       @include onDesktop {
         &::before {
           content: '';
@@ -36,6 +36,7 @@
       margin: 0 0 60px 0;
       position: relative;
       z-index: 2;
+      font-weight: 400;
 
       @include onDesktop {
         margin: 0 0 48px 0;
@@ -145,7 +146,7 @@
 
         </div>
         <img ref="arrowNext" class="industries__arrow" :src="arrowRight" alt="" @click="setPosition.minus">
-        <img class="industries__arrow industries__arrow--rotate" 
+        <img class="industries__arrow industries__arrow--rotate"
         ref="arrowPrev" :src="arrowRight" alt="" @click="setPosition.plus">
       </div>
 
@@ -167,7 +168,7 @@
     {title: 'Government & Public', text: 'Drive data-driven policy decisions, enhance citizen services, and improve operational efficiency'},
     {title: 'Retail & Ecommerce', text: 'Personalize customer experiences, optimize pricing strategies, and boost sales'},
   ]
-  
+
   const arrowNext = ref(null)
   const arrowPrev = ref(null)
 
