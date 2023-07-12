@@ -30,6 +30,10 @@
     &__key {
       padding-bottom: 278px;
     }
+
+    &__description {
+      font-weight: 400;
+    }
   }
 </style>
 
@@ -39,9 +43,16 @@
       <h1 class="privacy__title">Lorem Ipsum</h1>
       <p class="privacy__description">
         Welcome to our startup, where we are dedicated to empowering you with state-of-the-art AI technology. Our mission is to revolutionize the way you interact with artificial intelligence, putting the power in your hands to create, innovate, and succeed.
-        At [Startup Name], we believe that AI should be accessible to everyone. We understand that each organization and individual has unique requirements and challenges, which is why we are committed to providing you with a private AI environment tailored to your specific needs. Our cutting-edge technology allows you to harness the full potential of AI while ensuring the utmost privacy and security.
-        Harnessing the power of your private AI environment, you can unlock endless possibilities.
-        Whether you are a business seeking to optimize operations, a researcher pushing the boundaries of knowledge, or an individual looking to enhance your daily life,
+      </p>
+      <p class="privacy__description">
+        At [Startup Name], we believe that <strong>AI should be accessible to everyone.</strong> We understand that each organization and individual has unique requirements and challenges, which is why we are committed to providing you with a private AI environment tailored to your specific needs. Our cutting-edge technology allows you to harness the full potential of AI <strong>while ensuring the utmost</strong> privacy and security.
+      </p>
+
+      <p class="privacy__description">
+        • Harnessing the power of your private AI environment, you can unlock endless possibilities.
+      </p>
+      <p class="privacy__description">
+        • Whether you are a business seeking to optimize operations, a researcher pushing the boundaries of knowledge, or an individual looking to enhance your daily life.
       </p>
     </div>
 
