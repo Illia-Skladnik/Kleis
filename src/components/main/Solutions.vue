@@ -89,6 +89,7 @@
       color: $white;
       max-width: 700px;
 
+
       @include onDesktop {
         max-width: 600px;
       }
@@ -145,7 +146,7 @@
               <img v-if="dots.first" :src="dotActive" alt="dot" class="solutions__dot">
               <img v-else :src="dotInactive" alt="dot" class="solutions__dot">
             </div>
-            <p v-if="dots.first" class="solutions__solution-description">Embrace a future where AI is personalized just for you. Elevate your individual productivity and decision-making capabilities with a private environment and customised AI solution. Gain advanced automation in your daily tasks, while your sensitive personal data remains secure and protected.</p>
+            <p v-if="dots.first" class="solutions__solution-description">Embrace a future where <strong>AI is personalized just for you.</strong> Elevate your individual productivity and decision-making capabilities with a private environment and customised AI solution. Gain advanced automation in your daily tasks, while your sensitive personal data remains secure and protected.</p>
           </div>
         </div>
 

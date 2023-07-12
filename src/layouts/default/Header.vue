@@ -34,7 +34,7 @@
       width: 304px;
       height: 334px;
       position: relative;
-      
+
 
       @include onDesktop {
         width: 817px;
@@ -47,7 +47,7 @@
     }
 
     &__title {
-      color: $white;
+      color: $light-silver;
       text-align: center;
       font-size: 31px;
       font-style: normal;
@@ -64,7 +64,7 @@
     }
 
     &__subtitle {
-      color: $white;
+      color: $light-silver;
       text-align: center;
       height: 40px;
 
