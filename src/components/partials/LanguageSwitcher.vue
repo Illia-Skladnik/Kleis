@@ -39,7 +39,6 @@ body {
     display: flex;
     color: $white;
     font-size: 14px;
-    text-transform: uppercase;
 		transition: .3s;
     background-repeat: no-repeat;
     background-position: right center;
@@ -74,7 +73,7 @@ body {
     color: $black;
 
     &:last-of-type {
-  		border-bottom: 0;
+      border-bottom: 0;
     }
 
     &:hover {

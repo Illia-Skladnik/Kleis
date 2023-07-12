@@ -13,11 +13,9 @@
 </style>
 
 <template>
-  <!-- <div class="logo"> -->
     <router-link to="/" class="logo">
       <img class="logo__image" :src="logo" alt="logo">
     </router-link>
-  <!-- </div> -->
 </template>
 
 <script setup>
