@@ -97,6 +97,22 @@ body {
       background-color : #D3D3D3;
   }
 
+  :-webkit-direct-focus {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: 0px!important;}
+
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+    outline: none;
+    }
+
+    *:focus {
+    outline: none;
+    }
+
 </style>
 
 <template>
