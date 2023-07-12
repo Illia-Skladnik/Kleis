@@ -36,7 +36,7 @@
     }
   }
 </style>
-
+<!-- #region template -->
 <template>
   <div class="privacy">
     <div class="privacy__block">
@@ -59,7 +59,7 @@
     <KeyToBusiness class="privacy__key"/>
   </div>
 </template>
-
+<!-- #endregion -->
 <script setup>
   import KeyToBusiness from '@/components/main/KeyToBusiness.vue';
 </script>

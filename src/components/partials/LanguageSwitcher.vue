@@ -82,10 +82,20 @@ body {
 	}
 }
 
-nav ul, li {
-  list-style-type: none;
-}
+  ul, li {
+    list-style-type: none;
+  }
 
+  input {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  input[type=text], input[type=button], input[type=submit] {
+      background-color : #D3D3D3;
+  }
 
 </style>
 
