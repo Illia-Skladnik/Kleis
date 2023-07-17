@@ -75,19 +75,19 @@
   <nav>
     <menu class="menu_nav">
       <li class="menu_nav__item">
-          <a href="#" class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Home</a>
+          <button class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Home</button>
       </li>
       <li class="menu_nav__item">
-          <a href="#" class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Mission</a>
+          <button class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Mission</button>
       </li>
       <li class="menu_nav__item">
-          <a href="#" class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Services</a>
+          <button @click="handleClickindustries('solutions')" class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Services</button>
       </li>
       <li class="menu_nav__item">
-          <a href="#" class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Industries&Vertical</a>
+          <button @click="handleClickindustries('industries')" class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Industries&Vertical</button>
       </li>
       <li class="menu_nav__item">
-          <a href="#" class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Blog</a>
+          <button class="menu_nav__link" :class="navBarModal.isActiveModal ? 'menu_nav__dark-text' : ''">Blog</button>
       </li>
     </menu>
   </nav>
@@ -95,6 +95,24 @@
 
 <script setup>
   import { useNavBarModal } from '@/store/NavBarModal';
+
+  function handleClickindustries(page) {
+    if (navBarModal.isActiveModal) {
+      navBarModal.toggleModal();
+      document.documentElement.style.overflow = 'visible';
+    }
+
+
+    const targetBlock = document.getElementById(page);
+    const targetBlockTop = targetBlock.getBoundingClientRect().top;
+    const scrollTop = document.documentElement.scrollTop;
+    const targetPosition = targetBlockTop + scrollTop;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth',
+    });
+  }
 
   const navBarModal = useNavBarModal()
 </script>

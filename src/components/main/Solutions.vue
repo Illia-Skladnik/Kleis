@@ -128,7 +128,7 @@
 </style>
 
 <template>
-  <div class="solutions">
+  <div class="solutions" id="solutions">
     <img :src="background" alt="background" class="solutions__image">
     <div class="solutions__container-wrapper">
       <div class="solutions__container">

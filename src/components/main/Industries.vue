@@ -151,7 +151,7 @@
 </style>
 
 <template>
-  <div class="industries">
+  <div class="industries" id="industries">
     <div class="industries__wrapper">
       <h2 class="industries__h2">Industries</h2>
 
