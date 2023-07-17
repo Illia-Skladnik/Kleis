@@ -13,9 +13,28 @@
 </style>
 
 <template>
-  <button class="button__contact-us">Contact Us</button>
+  <button class="button__contact-us" @click="handleClick">Contact Us</button>
 </template>
 
 <script setup>
+  import { useNavBarModal } from '@/store/NavBarModal';
 
+  const navBarModal = useNavBarModal()
+  function handleClick() {
+    if (navBarModal.isActiveModal) {
+      navBarModal.toggleModal();
+      document.documentElement.style.overflow = 'visible';
+    }
+
+
+    const targetBlock = document.getElementById('info');
+    const targetBlockTop = targetBlock.getBoundingClientRect().top;
+    const scrollTop = document.documentElement.scrollTop;
+    const targetPosition = targetBlockTop + scrollTop - 150;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth',
+    });
+  }
 </script>

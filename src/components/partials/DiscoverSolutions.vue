@@ -11,7 +11,7 @@
     line-height: 58px;
     margin: 0 auto;
 
-    font-weight: 700;  
+    font-weight: 700;
   }
 </style>
 
@@ -23,7 +23,7 @@
 
 
 <script setup>
-  function handleClick(){
+  function handleClick() {
     const featuresHeight = document.querySelector('.advantages').clientHeight
     const headerHeight = document.querySelector('header').clientHeight
     const requestDemoHeight = document.querySelector('.home__request-demo').clientHeight

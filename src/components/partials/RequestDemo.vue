@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-  function handleClick(){
+  function handleClick() {
     window.scrollTo({ top: document.body.clientHeight, behavior: 'smooth' })
   }
 </script>

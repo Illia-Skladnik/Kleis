@@ -12,7 +12,6 @@
     alt="logo"
     @click="handleBurgerClick"
   >
-  <!-- @click="navBarModal.toggleModal" -->
   <img
     v-else
     :src="CloseMenu"
@@ -32,6 +31,6 @@
   function handleBurgerClick(){
     navBarModal.toggleModal()
     const htmlTag = document.documentElement
-    htmlTag.style.overflow = !navBarModal.isActiveModal ? 'visible' : 'hidden' 
+    htmlTag.style.overflow = !navBarModal.isActiveModal ? 'visible' : 'hidden'
   }
 </script>
