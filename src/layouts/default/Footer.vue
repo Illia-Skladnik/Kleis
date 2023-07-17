@@ -140,7 +140,11 @@
             <ContactUsButton class="footer__button-contactUs"/>
           </div>
 
-          <p class="footer__paragraph --privacy">Privacy Policy | Terms of Service</p>
+          <p class="footer__paragraph --privacy">
+            <span>Privacy Policy</span>
+            &nbsp;|&nbsp;
+            <span>Terms of Service</span>
+          </p>
         </div>
       </div>
     </div>
