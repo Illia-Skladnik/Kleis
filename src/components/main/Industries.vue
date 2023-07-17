@@ -13,10 +13,13 @@
       margin: 0 auto;
       @extend %d-f-sb;
       flex-direction: column;
-      padding: 108px 0 59px 102px;
+
+      padding: 108px 0 59px 0;
       position: relative;
 
       @include onDesktop {
+
+        padding: 108px 0 59px 102px;
         &::before {
           content: '';
           position: absolute;
@@ -37,8 +40,10 @@
       position: relative;
       z-index: 2;
       font-weight: 400;
+      padding-left: 24px;
 
       @include onDesktop {
+        padding-left: 0;
         margin: 0 0 48px 0;
         font-size: 48px;
       }
@@ -55,7 +60,10 @@
       top: 0;
       left: 0;
       min-width: 100vw;
-      overflow: hidden;
+
+      @include onDesktop {
+        // overflow: hidden;
+      }
     }
     &__button {
       display: none;
@@ -116,16 +124,28 @@
       bottom: 0;
 
       &--rotate {
-        left: 0;
+        right: 150px;
         transform: rotate(180deg);
       }
 
       &--disabled {
         opacity: .5;
         pointer-events: none;
+
+        width: 33px;
+        width: 36px;
+        height: 23px;
+        object-fit: cover;
+        object-position: right;
       }
 
-      @include onDesktop {display: none;}
+      &--last {
+        right: 78px;
+      }
+
+      @include onDesktop {
+        display: none;
+      }
     }
   }
 </style>
@@ -146,7 +166,7 @@
 
         </div>
         <img ref="arrowNext" class="industries__arrow" :src="arrowRight" alt="" @click="setPosition.minus">
-        <img class="industries__arrow industries__arrow--rotate"
+        <img class="industries__arrow industries__arrow--rotate industries__arrow--disabled"
         ref="arrowPrev" :src="arrowRight" alt="" @click="setPosition.plus">
       </div>
 
@@ -174,7 +194,7 @@
 
   window.onload = () => setPosition.jobWithDOM()
 
-  class SetPosition{
+  class SetPosition {
     position = 0
     idx = 0
     step = 180 + 39
@@ -188,25 +208,30 @@
     }
 
     minus(){
-      if(this.idx + 1 < dataForCarousel.length){
+      if(this.idx + 1 < dataForCarousel.length) {
         this.idx += 1
         this.position -= this.step
         this.jobWithDOM()
       }
     }
 
-    jobWithDOM(){
+    jobWithDOM() {
       const items = document.querySelectorAll('.industries__item')
       items.forEach(item => item.setAttribute('style', `left: ${this.position}px;`))
 
-      if(this.idx > 0 && this.idx < dataForCarousel.length - 1){
+      if (this.idx > 0 && this.idx < dataForCarousel.length - 1) {
         arrowNext.value.classList.remove('industries__arrow--disabled')
         arrowPrev.value.classList.remove('industries__arrow--disabled')
+        arrowNext.value.classList.remove('industries__arrow--last')
       }
-      else if(this.idx === 0) arrowPrev.value.classList.add('industries__arrow--disabled')
-      else arrowNext.value.classList.add('industries__arrow--disabled')
+      else if (this.idx === 0) arrowPrev.value.classList.add('industries__arrow--disabled')
+      else {
+        arrowNext.value.classList.add('industries__arrow--disabled')
+        arrowNext.value.classList.add('industries__arrow--last')
+      }
     }
   }
 
-  const setPosition = new SetPosition()
+
+  const setPosition = new SetPosition();
 </script>

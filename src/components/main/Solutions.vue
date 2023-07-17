@@ -172,8 +172,10 @@
           <div class="solutions__dots-block">
             <img v-if="dots.third" :src="dotActive" alt="dot" class="solutions__dot-desktop">
             <img v-else :src="dotInactive" alt="dot" class="solutions__dot-desktop">
+
             <img v-if="dots.third" :src="dotActive" alt="dot" class="solutions__dot-desktop">
             <img v-else :src="dotInactive" alt="dot" class="solutions__dot-desktop">
+
             <img v-if="dots.third" :src="dotActive" alt="dot" class="solutions__dot-desktop">
             <img v-else :src="dotInactive" alt="dot" class="solutions__dot-desktop">
           </div>
@@ -195,7 +197,7 @@
 
 
 <script setup>
-  import { ref, onMounted } from 'vue';
+  import { ref } from 'vue';
 
   const dots = ref({
     first: true,
@@ -203,14 +205,11 @@
     third: false,
   });
 
-  onMounted(() => {
-    if (window.innerWidth >= 1440) {
-      dots.value.second = true;
-      dots.value.third = true;
-    }
-  });
-
-  const toggleDots = (num) => dots.value[num] = !dots.value[num];
+  const toggleDots = (num) => Object.keys(dots.value).forEach(dot =>
+    num !== dot
+      ? dots.value[dot] = false
+      : dots.value[num] = !dots.value[num]
+  );
 
   const background = new URL('@/assets/images/solutionsBackground.png', import.meta.url);
   const dotActive = new URL('@/assets/svg/dotActive.svg', import.meta.url);
