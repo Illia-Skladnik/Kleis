@@ -10,11 +10,23 @@
     justify-content: center;
     position: relative;
 
+    @include onTablet {
+      margin-right: -33px;
+    }
+
+    @include onDesktop {
+      margin: 0;
+    }
+
     &__container-wrapper {
       width: 100%;
       height: 100%;
       position: absolute;
       padding: 51px 30px 0 24px;
+
+      @include onTablet {
+        padding: 50px 130px 0 32px;
+      }
 
       @include onDesktop {
         padding: 74px 209px 0 46px;
@@ -32,6 +44,10 @@
             border-bottom: 1px solid $goldenrod;
             padding: 30px 0;
             margin: 41px 0 30px;
+
+            @include onTablet {
+              margin: 20px 0;
+            }
           }
 
           .solutions__dots-block {
@@ -47,13 +63,21 @@
     }
 
     &__solution-wrapper {
-      @include onDesktop {
+      @include onTablet {
         display: flex;
       }
     }
 
     &__image {
+      @include onTablet {
+        width: 837px;
+        height: 676px;
+      }
 
+      @include onDesktop {
+        width: auto;
+        height: auto;
+      }
     }
 
     &__title {
@@ -66,13 +90,20 @@
       color: $light-grey;
       margin-bottom: 44px;
 
+      @include onTablet {
+        padding-left: 97px;
+        font-size: 31px;
+        margin-bottom: 34px;
+      }
+
       @include onDesktop {
+        font-size: 45px;
         padding-left: 94px;
+        margin-bottom: 49px;
       }
     }
 
     &__solution-title {
-      color: $white;
       color: $light-grey;
       font-size: 32px;
 
@@ -80,18 +111,29 @@
       line-height: normal;
       margin-bottom: 21px;
 
+      @include onTablet {
+        margin-bottom: 3px;
+        font-size: 22px;
+      }
+
       @include onDesktop {
         margin-bottom: 4px;
+        font-size: 32px;
       }
     }
 
     &__solution-description {
-      color: $white;
-      max-width: 700px;
+      color: $light-silver;
+      max-width: 400px;
 
+      @include onTablet {
+        max-width: 408px;
+        font-size: 11px;
+      }
 
       @include onDesktop {
         max-width: 600px;
+        font-size: 16px;
       }
     }
 
@@ -101,7 +143,7 @@
     }
 
     &__dot {
-      @include onDesktop {
+      @include onTablet {
         display: none;
       }
     }
@@ -109,7 +151,7 @@
     &__dots-block {
       display: none;
 
-      @media (min-width: 1440px) {
+      @include onTablet {
         width: 94px;
         height: 52px;
         display: flex;

@@ -38,7 +38,7 @@
       position: absolute;
       top: 91px;
       left: 21px;
-      color: $white;
+      color: $light-silver;
       width: 260px;
       font-size: 23px;
       line-height: 38px;

@@ -11,6 +11,7 @@
 
     @include onTablet {
       height: 536px;
+      padding-top: 160px;
     }
 
     @include onDesktop {
