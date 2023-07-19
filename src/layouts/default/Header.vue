@@ -9,6 +9,10 @@
     width: 100%;
     padding-top: 273px;
 
+    @include onTablet {
+      // height: 536px;
+    }
+
     @include onDesktop {
       height: 927px;
       padding-top: 288px;

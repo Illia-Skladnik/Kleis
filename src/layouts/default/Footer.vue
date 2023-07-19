@@ -4,7 +4,7 @@
   @import '@/assets/styles/_mixins.scss';
 
   .footer {
-    background: $dark;
+    background: $dark-blue;
     height: 1052px;
     display: flex;
     flex-direction: column;
@@ -14,11 +14,16 @@
     width: 100%;
     scroll-behavior: smooth;
 
+    @include onTablet {
+      justify-content: space-between;
+      align-items: normal;
+      height: 281px;
+      padding: 45px 0 0 0 ;
+    }
+
     @include onDesktop {
       padding: 72px 125px 28px 167px;
       height: 452px;
-      justify-content: space-between;
-      align-items: normal;
     }
 
     &__flex {
@@ -26,11 +31,16 @@
       flex-direction: column;
       width: 390px;
 
-      @include onDesktop {
-        max-width: 100%;
+      @include onTablet {
         flex-direction: row;
         justify-content: space-between;
+        max-width: 100%;
         width: 100%;
+
+      }
+
+      @include onDesktop {
+
       }
     }
 
@@ -38,8 +48,13 @@
       display: flex;
       flex-direction: column;
 
+      @include onTablet {
+        padding-right: 78px;
+        align-items: end;
+      }
+
       @include onDesktop {
-        flex-direction: column;
+        padding-right: 0;
       }
     }
 
@@ -47,53 +62,125 @@
       display: flex;
       flex-direction: column;
 
-      @include onDesktop {
+      @include onTablet {
         justify-content: space-between;
         flex-direction: row;
+      }
+
+      @include onDesktop {
+
+      }
+
+      p:first-of-type {
+        margin: 0 0 15px 0;
+
+        @include onTablet {
+          margin: 0;
+        }
+
+        @include onDesktop {
+
+        }
+      }
+
+      p:last-of-type {
+        margin: 0 0 55px 0;
+
+        @include onTablet {
+          margin: 0 45px 0 0;
+        }
+
+        @include onDesktop {
+
+        }
       }
     }
 
     &__logo-container {
       margin: 0 0 41px 10px;
+
+      @include onTablet {
+        padding-left: 74px;
+        margin: 0;
+      }
+
+      @include onDesktop {
+        padding-left: 0;
+      }
+
       .logo {
         width: 188px;
         height: 122px;
-      }
 
-      @include onDesktop {
-        margin: 0;
+        @include onTablet {
+        width: 117px;
+        height: 76px;
+        }
+
+        @include onDesktop {
+          width: 188px;
+          height: 122px;
+        }
       }
     }
-    &__container-contactUs {
-      margin: 0 0 117px 24px;
 
-      @include onDesktop {
+    &__container-contactUs {
+      margin: 0 0 92px 24px;
+
+      @include onTablet {
         margin: 0;
         order: 2;
+      }
+
+      @include onDesktop {
+
+      }
+    }
+
+    &__separator {
+      display: none;
+      color: $light-silver;
+
+      @include onTablet {
+        display: inline;
+        line-height: 36px;
+        font-size: 9px;
+      }
+
+      @include onDesktop {
+        line-height: 58px;
+        font-size: 11px;
       }
     }
 
     &__paragraph {
-
       text-align: center;
-      &.--privacy {margin: 0 0 77px 0;}
-      &.--copyright {margin: 0 0 83px 0;}
+      font-size: 16px;
+      color: $light-silver;
+
+      @include onTablet {
+        line-height: 36px;
+        font-size: 9px;
+
+        &.--copyright {
+          margin: 0;
+        }
+      }
 
       @include onDesktop {
-        &.--privacy {
-          margin: 0;
-          font-size: 11px;
-          line-height: 58px;
-        }
-        &.--copyright {margin: 0;}
+        font-size: 11px;
+        line-height: 58px;
+      }
+
+      &.--copyright {
+        margin: 0 0 83px 0;
       }
     }
 
     &__nav-menu {
       margin: 0 0 36px 24px;
-      grid-area: navmenu;
 
-      @include onDesktop {
+      @include onTablet {
         margin: 0 0 32px 0;
         width: min-content;
       }
@@ -112,16 +199,32 @@
         height: 721;
         overflow: hidden;
 
-        @include onDesktop {
+        @include onTablet {
           top: -580px;
 
           height: 580px;
           width: 100%;
         }
+
+        @include onDesktop {
+
+        }
       }
     }
 
+    &__button-contact {
+      @include onTablet {
+        width: 109px;
+        height: 36px;
+        font-size: 9px;
+      }
 
+      @include onDesktop {
+        width: 175px;
+        height: 58px;
+        font-size: 16px;
+      }
+    }
   }
 </style>
 
@@ -137,20 +240,30 @@
 
         <div class="footer__policy-contact-flex">
           <div class="footer__container-contactUs">
-            <ContactUsButton class="footer__button-contactUs"/>
+            <ContactUsButton class="footer__button-contact"/>
           </div>
 
-          <p class="footer__paragraph --privacy">
+          <p class="footer__paragraph">
             <span>Privacy Policy</span>
             &nbsp;|&nbsp;
             <span>Terms of Service</span>
+          </p>
+
+          <span class="footer__separator">
+            &nbsp;|&nbsp;
+          </span>
+
+          <p class="footer__paragraph">
+            <span>Cookie Policy</span>
+            &nbsp;|&nbsp;
+            <span>Legal Notice</span>
           </p>
         </div>
       </div>
     </div>
     <p class="footer__paragraph --copyright">© {{ copyright }} Kleis. All rights reserved.</p>
     <div class="footer__label--wrapper">
-      <InfoLabel class="footer__label"/>
+      <!-- <InfoLabel class="footer__label"/> -->
     </div>
   </footer>
 </template>

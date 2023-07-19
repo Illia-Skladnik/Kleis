@@ -1,5 +1,5 @@
 <style scoped lang="scss">
-  @import '../../assets//styles/variables.scss';
+  @import '../../assets/styles/variables.scss';
   .button__contact-us {
     background: $dark-orange;
     font-size: 16px;
@@ -9,6 +9,7 @@
     line-height: 2;
     border-radius: 30px;
     font-weight: 700;
+    color: $light-silver;
   }
 </style>
 

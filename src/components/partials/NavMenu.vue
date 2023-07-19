@@ -1,6 +1,5 @@
 <style scoped lang="scss">
   @import '@/assets/styles/variables.scss';
-
   @import '@/assets/styles/_placeholders.scss';
   @import '@/assets/styles/_mixins.scss';
 
@@ -15,7 +14,7 @@
         margin: 0;
       }
 
-      @include onDesktop {
+      @include onTablet {
         margin: 0 0 0 24px;
         &:last-of-type {
           margin: 0 0 0 24px;
@@ -25,10 +24,18 @@
 
     &__link {
       text-decoration: none;
-      color: $white;
+      color: $light-silver;
+
+      @include onTablet {
+        font-size: 9px;
+      }
+
+      @include onDesktop {
+        font-size: 16px;
+      }
     }
 
-    @include onDesktop {
+    @include onTablet {
       flex-direction: row;
       height: min-content;
       width: min-content;
@@ -39,15 +46,20 @@
         position: relative;
         width: min-content;
 
-        @include onDesktop {
-          margin: 0 24px 0 0;
+        @include onTablet {
+          margin: 0 14px 0 0;
 
           &:first-of-type {
             margin: 0;
           }
+
           &:last-of-type {
             margin: 0;
           }
+        }
+
+        @include onDesktop {
+          margin-right: 24px;
         }
 
         &:hover::after {

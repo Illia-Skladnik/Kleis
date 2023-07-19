@@ -18,7 +18,7 @@
       justify-content: space-between;
       margin-bottom: 182px;
 
-      @include onDesktop {
+      @include onTablet {
         display: none;
       }
     }
@@ -28,12 +28,17 @@
       display: none;
       height: 69px;
       align-items: center;
-      width: 1217px;
+
       padding-top: 51px;
 
-      @include onDesktop {
+      @include onTablet {
         display: flex;
         justify-content: space-between;
+        width: 704px;
+      }
+
+      @include onDesktop {
+        width: 1217px;
       }
     }
 
@@ -46,6 +51,11 @@
       height: 36px;
       width: 83px;
 
+      @include onTablet {
+        height: 40px;
+        width: 93px;
+      }
+
       @include onDesktop {
         width: 160px;
         height: 69px;
@@ -53,7 +63,17 @@
     }
 
     &__contact-us {
-      margin-right: 24px;
+      margin-right: 14px;
+      width: 101px;
+      height: 34px;
+      font-size: 9px;
+
+      @include onDesktop {
+        margin-right: 24px;
+        width: 175px;
+        height: 58px;
+        font-size: 16px;
+      }
     }
 
     &__nav-menu {
@@ -69,8 +89,12 @@
       display: flex;
       justify-content: center;
 
-      @include onDesktop {
+      @include onTablet {
         height: 116px;
+      }
+
+      @include onDesktop {
+
       }
 
     }

@@ -1,25 +1,6 @@
 <style scoped lang="scss">
   @import '@/assets/styles/variables.scss';
-
-html {
-  // box-sizing: border-box;
-  // font-size: 62.5%;
-
-  *,
-  *:before,
-  *:after {
-    // box-sizing: inherit;
-  }
-}
-
-body {
-	// display: flex;
-	// justify-content: center;
-	// align-items: center;
-	// width: 100vw;
-	// height: 100vh;
-	// background-color: #98DFFD;
-}
+  @import '@/assets/styles/_mixins.scss';
 
 .dropdown {
 	width: 100px;
@@ -37,17 +18,29 @@ body {
   &__filter {
     position: relative;
     display: flex;
-    color: $white;
-    font-size: 14px;
+    color: $light-silver;
+
 		transition: .3s;
     background-repeat: no-repeat;
     background-position: right center;
+    background-size: 12px;
+    width: 63px;
+    font-size: 14px;
 
     &--black {
       color: $black;
     }
 
+    @include onTablet {
+      width: 48px;
+      font-size: 9px;
+    }
 
+    @include onDesktop {
+      font-size: 14px;
+      background-size: 24px;
+      width: 77px;
+    }
   }
 
   &__select {
