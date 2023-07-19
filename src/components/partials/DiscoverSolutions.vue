@@ -12,6 +12,7 @@
     margin: 0 auto;
 
     font-weight: 700;
+    color: $light-silver;
   }
 </style>
 

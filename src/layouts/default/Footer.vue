@@ -225,6 +225,11 @@
         font-size: 16px;
       }
     }
+
+    &__link {
+      text-decoration: none;
+      color: $light-silver;
+    }
   }
 </style>
 
@@ -244,26 +249,25 @@
           </div>
 
           <p class="footer__paragraph">
-            <span>Privacy Policy</span>
+            <router-link to="/privacy-policy" class="footer__link">Privacy Policy</router-link>
             &nbsp;|&nbsp;
-            <span>Terms of Service</span>
+            <router-link to="/terms-of-services" class="footer__link">Terms of Services</router-link>
           </p>
-
           <span class="footer__separator">
             &nbsp;|&nbsp;
           </span>
 
           <p class="footer__paragraph">
-            <span>Cookie Policy</span>
+            <router-link to="/cookie-policy" class="footer__link">Cookie Policy</router-link>
             &nbsp;|&nbsp;
-            <span>Legal Notice</span>
+            <router-link to="/legal-notice" class="footer__link">Legal Notice</router-link>
           </p>
         </div>
       </div>
     </div>
     <p class="footer__paragraph --copyright">© {{ copyright }} Kleis. All rights reserved.</p>
     <div class="footer__label--wrapper">
-      <!-- <InfoLabel class="footer__label"/> -->
+      <InfoLabel class="footer__label"/>
     </div>
   </footer>
 </template>

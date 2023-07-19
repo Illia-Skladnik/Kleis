@@ -10,7 +10,7 @@
     padding-top: 273px;
 
     @include onTablet {
-      // height: 536px;
+
     }
 
     @include onDesktop {
@@ -39,6 +39,9 @@
       height: 334px;
       position: relative;
 
+      @include onTablet {
+        width: 473px;
+      }
 
       @include onDesktop {
         width: 817px;
@@ -48,6 +51,20 @@
 
     &__discover-solutions {
       margin: 0 auto;
+
+      @include onTablet {
+        width: 125px;
+        height: 34px;
+        font-size: 9px;
+        line-height: 34px;
+      }
+
+      @include onDesktop {
+        width: 216px;
+        height: 58px;
+        font-size: 16px;
+        line-height: 58px;
+      }
     }
 
     &__title {
@@ -58,6 +75,10 @@
       font-weight: 400;
       line-height: 35px;
       margin-bottom: 20px;
+
+      @include onTablet {
+        font-size: 37px;
+      }
 
       @include onDesktop {
         font-size: 64px;
@@ -79,11 +100,15 @@
       line-height: 20px;
       margin-bottom: 79px;
 
+      @include onTablet {
+        font-size: 9px;
+        width: 231px;
+        margin: 0 auto 17px;
+      }
+
       @include onDesktop {
         width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
+        margin: 0 auto 30px;
         font-size: 16px;
       }
     }
@@ -93,18 +118,33 @@
       justify-content: space-between;
       margin: 0 auto;
 
+      @include onTablet {
+        width: 264px;
+      }
+
       @include onDesktop {
         width: 456px;
       }
     }
 
     &__request-demo {
-      margin-right: 30px;
       display: none;
 
-      @include onDesktop {
+      @include onTablet {
+        margin-right: 30px;
         display: block;
+
+        width: 121px;
+        height: 34px;
+
+        font-size: 9px
       };
+
+      @include onDesktop {
+        width: 210px;
+        height: 58px;
+        font-size: 16px;
+      }
     }
 
     &__navbar {
@@ -134,7 +174,6 @@
       font-weight: 400;
     }
   }
-
 </style>
 
 <template>
@@ -157,9 +196,9 @@
         </div>
       </div>
 
-      <div class="header__privacy-block" v-if="path === '/privacy'">
-        <h1 class="header__privacy-block-title">Legal</h1>
-        <span class="header__privacy-block-description">And Privacy policy</span>
+      <div class="header__privacy-block" v-if="path === '/privacy-policy'">
+        <h1 class="header__privacy-block-title">Privacy Policy</h1>
+        <!-- <span class="header__privacy-block-description">And Privacy policy</span> -->
       </div>
     </header>
   </div>

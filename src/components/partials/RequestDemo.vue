@@ -3,14 +3,14 @@
   .request-demo {
     height: 59px;
     width: 210px;
-    border: 2px solid $white;
+    border: 2px solid $light-silver;
     border-radius: 44px;
     font-weight: 700;
     transition-duration: 200ms;
-    color: $white;
+    color: $light-silver;
 
     &:hover {
-      background-color: $white;
+      background-color: $light-silver;
       color: $golden-brown;
     }
   }

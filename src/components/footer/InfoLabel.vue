@@ -34,7 +34,6 @@
   <div class="info" id="info">
     <img class="info__label" :src="label" alt="label">
     <img :src="messageSign" alt="message" class="info__msg-sign">
-    <!-- <router-link to="/privacy" class="info__link">info@kleis.com</router-link> -->
     <button @click="sendEmail" class="info__link">info@kleis.com</button>
   </div>
 </template>
