@@ -8,7 +8,7 @@
       margin: -145px auto 86px auto;
 
       @include onTablet {
-        // margin-bottom: 400px;
+        margin-bottom: 98px;
         margin-top: -59px;
       }
 

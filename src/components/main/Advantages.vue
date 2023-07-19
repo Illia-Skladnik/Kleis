@@ -7,16 +7,26 @@
     height: 1007px;
     margin: 0 auto;
 
-    @include onDesktop {
+    @include onTablet {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      width: 732px;
+      height: 247px;
+    }
+
+    @include onDesktop {
       width: 1130px;
       height: 383px;
     }
 
     &__advantage {
       margin-bottom: 64px;
+
+      @include onTablet {
+        margin-bottom: 0;
+        width: 234px;
+      }
 
       @include onDesktop {
         width: 328px;
@@ -40,6 +50,12 @@
           width: 154px;
           margin-bottom: 45px;
 
+          @include onTablet {
+            width: 112px;
+            height: 102px;
+            margin-bottom: 30px;
+          }
+
           @include onDesktop {
             height: 158px;
             width: 175px;
@@ -52,6 +68,11 @@
           height: 154px;
           width: 139px;
 
+          @include onTablet {
+            width: 102px;
+            height: 112px;
+          }
+
           @include onDesktop {
             width: 158px;
             height: 175px;
@@ -63,6 +84,12 @@
         img {
           height: 155px;
           width: 182px;
+
+          @include onTablet {
+            width: 133px;
+            height: 111px;
+
+          }
 
           @include onDesktop {
             width: 208px;
@@ -83,9 +110,14 @@
       font-size: 23px;
       line-height: 37px;
 
+      @include onTablet {
+        font-size: 15px;
+        line-height: normal;
+      }
+
       @include onDesktop {
-
-
+        font-size: 23px;
+        line-height: 37px;
       }
     }
 
@@ -95,6 +127,16 @@
       text-align: center;
       font-size: 16px;
       line-height: 26px;
+
+      @include onTablet {
+        font-size: 10px;
+        line-height: normal;
+      }
+
+      @include onDesktop {
+        font-size: 16px;
+        line-height: 26px;
+      }
     }
   }
 </style>
