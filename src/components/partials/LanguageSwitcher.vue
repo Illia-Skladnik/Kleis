@@ -23,8 +23,8 @@
 		transition: .3s;
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: 12px;
-    width: 63px;
+    background-size: 17px;
+    width: 74px;
     font-size: 14px;
 
     &--black {
@@ -32,14 +32,14 @@
     }
 
     @include onTablet {
-      width: 48px;
+      width: 53px;
       font-size: 9px;
     }
 
     @include onDesktop {
       font-size: 14px;
       background-size: 24px;
-      width: 77px;
+      width: 80px;
     }
   }
 

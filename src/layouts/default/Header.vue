@@ -10,7 +10,7 @@
     padding-top: 273px;
 
     @include onTablet {
-
+      height: 536px;
     }
 
     @include onDesktop {
@@ -31,6 +31,14 @@
 
       display: flex;
       justify-content: center;
+
+      @include onTablet {
+        height: 536px;
+      }
+
+      @include onDesktop {
+        height: 927px;
+      }
     }
 
     &__center-block {
@@ -131,9 +139,8 @@
       display: none;
 
       @include onTablet {
-        margin-right: 30px;
         display: block;
-
+        margin-right: 17px;
         width: 121px;
         height: 34px;
 
@@ -144,6 +151,7 @@
         width: 210px;
         height: 58px;
         font-size: 16px;
+        margin-right: 30px;
       }
     }
 

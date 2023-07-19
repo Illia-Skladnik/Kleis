@@ -13,6 +13,10 @@
 
     font-weight: 700;
     color: $light-silver;
+
+    &:hover {
+      background-color: $golden;
+    }
   }
 </style>
 

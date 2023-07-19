@@ -5,10 +5,16 @@
     padding-bottom: 298px;
 
     &__request-demo {
-      margin: -135px auto 86px auto;
+      margin: -145px auto 86px auto;
+
+      @include onTablet {
+        // margin-bottom: 400px;
+        margin-top: -59px;
+      }
 
       @include onDesktop {
         margin-bottom: 201px;
+        margin-top: -201px;
       }
     }
 

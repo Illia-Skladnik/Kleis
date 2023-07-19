@@ -6,6 +6,10 @@
     position: relative;
     width: 358px;
 
+    @include onTablet {
+      width: 769px;
+    }
+
     @include onDesktop {
       width: 1233px;
     }
@@ -15,6 +19,14 @@
       left: 21px;
       top: 323px;
       width: 210px;
+
+      @include onTablet {
+        width: 131px;
+        height: 36px;
+        font-size: 10px;
+        top: 231px;
+        left: 59px;
+      }
 
       @include onDesktop {
         left: 94px;
@@ -30,9 +42,18 @@
       width: 260px;
       font-size: 23px;
       line-height: 38px;
+      font-weight: 400;
 
       &--orange {
         color: $dark-orange;
+      }
+
+      @include onTablet {
+        font-size: 20px;
+        top: 118px;
+        left: 61px;
+        width: 358px;
+        line-height: normal;
       }
 
       @include onDesktop {
@@ -46,6 +67,18 @@
 
     &__image {
       &--mobile {
+        @include onTablet {
+          display: none;
+        }
+      }
+
+      &--tablet {
+        display: none;
+
+        @include onTablet {
+          display: block;
+        }
+
         @include onDesktop {
           display: none;
         }
@@ -53,6 +86,7 @@
 
       &--desktop {
         display: none;
+
         @include onDesktop {
           display: block;
         }
@@ -64,6 +98,7 @@
 <template>
   <div class="request-demo">
     <img :src="group82" alt="image" class="request-demo__image--mobile"/>
+    <img :src="group123" alt="image" class="request-demo__image--tablet"/>
     <img :src="group57" alt="image" class="request-demo__image--desktop"/>
     <RequestDemo class="request-demo__button"/>
     <div class="request-demo__text">
@@ -79,4 +114,5 @@
 
   const group82 = new URL('@/assets/images/mobile/group82.png', import.meta.url);
   const group57 = new URL('@/assets/images/desktop/group57.png', import.meta.url);
+  const group123 = new URL('@/assets/images/tablet/group123.png', import.meta.url);
 </script>
