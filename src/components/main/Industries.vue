@@ -6,7 +6,6 @@
   @import '@/assets/styles/mixins';
 
   .industries {
-
     &__wrapper {
       max-width: 1197px;
       min-height: 669px;
@@ -17,23 +16,27 @@
       padding: 108px 0 59px 0;
       position: relative;
 
-      @include onDesktop {
-
+      @include onTablet {
         padding: 108px 0 59px 102px;
         &::before {
           content: '';
           position: absolute;
           width: 100vw;
           height: 100%;
-          left: 0;
+          left: 30px;
           top: 0;
           z-index: 0;
-          border-radius: 30px;
+          border-radius: 30px 0 0 30px;
           box-shadow: -15px 15px 30px rgba(#111, .2);
           background: $pale-blue;
         }
       }
+
+      @include onDesktop {
+        left: 0;
+      }
     }
+
     &__h2 {
       font-size: 45px;
       margin: 0 0 60px 0;
@@ -48,6 +51,7 @@
         font-size: 48px;
       }
     }
+
     &__container {
       margin: 0 0 75px 0;
       height: 235px;
@@ -60,9 +64,10 @@
       top: 0;
       left: 0;
       min-width: 100vw;
+      // overflow: hidden;
 
-      @include onDesktop {
-        // overflow: hidden;
+      @include onTablet {
+        overflow: hidden;
       }
     }
     &__button {
@@ -101,6 +106,7 @@
         min-width: 200px;
       }
     }
+
     &__h3 {
       font-size: 26px;
       margin: 0 0 23px 0;
@@ -110,6 +116,7 @@
           margin: 0 0 29px 0;
       }
     }
+
     &__paragraph {
       font-size: 14px;
 
@@ -157,7 +164,6 @@
 
       <div class="industries__container">
         <div class="industries__carousel">
-
           <CarouselItem
             v-for="item, index in dataForCarousel"
             :item="item"

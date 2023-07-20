@@ -31,6 +31,9 @@
       @include onDesktop {
         left: 94px;
         top: 340px;
+        width: 210px;
+        height: 58px;
+        font-size: 16px;
       }
     }
 
