@@ -148,7 +148,7 @@
   <main class="home">
     <RequestDemoBlock class="home__request-demo"/>
     <Advantages class="home__advantages"/>
-    <div class="home__page">
+    <div class="home__page" >
       <div class="home__solutions-wrapper">
         <Solutions class="home__solutions"/>
         <img :src="group78Mobile" alt="label" class="home__solutions-label--mobile home__solutions-label">

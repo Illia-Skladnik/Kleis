@@ -114,11 +114,12 @@
       document.documentElement.style.overflow = 'visible';
     }
 
-
     const targetBlock = document.getElementById(page);
     const targetBlockTop = targetBlock.getBoundingClientRect().top;
     const scrollTop = document.documentElement.scrollTop;
-    const targetPosition = targetBlockTop + scrollTop;
+    const headerBlock = document.getElementById('navbar').offsetHeight;
+
+    const targetPosition = targetBlockTop + scrollTop - headerBlock;
 
     window.scrollTo({
       top: targetPosition,

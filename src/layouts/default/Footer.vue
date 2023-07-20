@@ -257,9 +257,9 @@
 <script setup>
   import { computed } from 'vue';
   import Logo from '@/components/partials/Logo.vue';
-  import ContactUsButton from '@/components/partials/ContactUsButton.vue'
-  import NavMenu from '@/components/partials/NavMenu.vue'
-  import InfoLabel from '@/components/footer/InfoLabel.vue'
+  import ContactUsButton from '@/components/partials/ContactUsButton.vue';
+  import NavMenu from '@/components/partials/NavMenu.vue';
+  import InfoLabel from '@/components/footer/InfoLabel.vue';
 
-  const copyright = computed(() => new Date().getFullYear())
+  const copyright = computed(() => new Date().getFullYear());
 </script>

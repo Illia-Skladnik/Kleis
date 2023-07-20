@@ -8,8 +8,9 @@
     }
 
     @include onTablet {
-      width: 769px;
+      // max-width: 769px;
       margin: 0 auto;
+      width: 100%;
     }
 
     @include onDesktop {

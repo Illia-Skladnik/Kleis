@@ -92,11 +92,6 @@
       @include onTablet {
         height: 116px;
       }
-
-      @include onDesktop {
-
-      }
-
     }
 
     &__image {
@@ -107,7 +102,7 @@
 </style>
 
 <template>
-  <div class="navbar">
+  <div class="navbar" id="navbar">
     <div class="navbar__background">
       <img :src="headerBackground" alt="background" class="navbar__image">
     </div>

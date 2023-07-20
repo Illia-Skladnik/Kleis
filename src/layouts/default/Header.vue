@@ -163,18 +163,21 @@
 
     &__privacy-block {
       margin: 0 auto;
-      width: 350px;
+      width: fit-content;
 
       @include onDesktop {
-        padding-left: 100px;
+        padding-left: 101px;
         width: 100%;
       }
     }
 
     &__privacy-block-title {
-      font-size: 64px;
-      margin-bottom: 30px;
+      font-size: 31px;
       font-weight: 400;
+
+      @include onDesktop {
+        font-size: 64px;
+      }
     }
 
     &__privacy-block-description {
@@ -207,7 +210,6 @@
 
       <div class="header__privacy-block" v-if="path === '/privacy-policy'">
         <h1 class="header__privacy-block-title">Privacy Policy</h1>
-        <!-- <span class="header__privacy-block-description">And Privacy policy</span> -->
       </div>
     </header>
   </div>
