@@ -44,8 +44,11 @@
 
     th {
       text-align: left;
-      padding:  0.5rem 1rem;
       font-weight: 400;
+
+      @include onTablet {
+        padding:  0.5rem 1rem;
+      }
     }
 
     &__bold {

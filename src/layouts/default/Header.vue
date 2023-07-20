@@ -211,6 +211,18 @@
       <div class="header__privacy-block" v-if="path === '/privacy-policy'">
         <h1 class="header__privacy-block-title">Privacy Policy</h1>
       </div>
+
+      <div class="header__privacy-block" v-if="path === '/cookie-policy'">
+        <h1 class="header__privacy-block-title">Cookie Policy</h1>
+      </div>
+
+      <div class="header__privacy-block" v-if="path === '/legal-notice'">
+        <h1 class="header__privacy-block-title">Legal Notice</h1>
+      </div>
+
+      <div class="header__privacy-block" v-if="path === '/terms-of-services'">
+        <h1 class="header__privacy-block-title">Terms of Services</h1>
+      </div>
     </header>
   </div>
 
