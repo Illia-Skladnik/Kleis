@@ -37,35 +37,12 @@
       margin-bottom: 29px;
     }
 
-    &__text-center {
-      text-align: center;
-      display: block;
-    }
-
-    th {
-      text-align: left;
-      font-weight: 400;
-
-      @include onTablet {
-        padding:  0.5rem 1rem;
-      }
-    }
-
-    &__bold {
-      font-weight: 700!important;
-      background-color: #f2f2f2;
-    }
-
     &__text-title {
       margin: 10px 0;
     }
 
     ul {
       padding-left: 20px;
-      margin-bottom: 10px;
-    }
-
-    table {
       margin-bottom: 10px;
     }
   }
