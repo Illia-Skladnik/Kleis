@@ -10,19 +10,23 @@
       max-width: 1197px;
       min-height: 669px;
       margin: 0 auto;
-      @extend %d-f-sb;
+      // @extend %d-f-sb;
+      display: flex;
+      // justify-content: space-between;
       flex-direction: column;
 
       padding: 108px 0 59px 0;
       position: relative;
 
       @include onTablet {
-        padding: 108px 0 59px 102px;
+        padding: 108px 0 59px 77px;
+        height: 502px;
+
         &::before {
           content: '';
           position: absolute;
           width: 100vw;
-          height: 100%;
+          height: 502px;
           left: 30px;
           top: 0;
           z-index: 0;
@@ -33,7 +37,13 @@
       }
 
       @include onDesktop {
+        padding: 81px 0 53px 102px;
         left: 0;
+        min-height: 669px;
+
+        &::before {
+          height: 100%;
+        }
       }
     }
 
@@ -44,6 +54,13 @@
       z-index: 2;
       font-weight: 400;
       padding-left: 24px;
+
+      color: $dark-blue;
+
+      @include onTablet {
+        font-size: 43px;
+        margin: 0 0 45px 0;
+      }
 
       @include onDesktop {
         padding-left: 0;
@@ -56,7 +73,18 @@
       margin: 0 0 75px 0;
       height: 235px;
       position: relative;
+
+      @include onTablet {
+        height: 141px;
+        margin: 0 0 83px 0;
+      }
+
+      @include onDesktop {
+        margin: 0 0 75px 0;
+        height: 235px;
+      }
     }
+
     &__carousel {
       position: absolute;
       display: flex;
@@ -64,7 +92,6 @@
       top: 0;
       left: 0;
       min-width: 100vw;
-      // overflow: hidden;
 
       @include onTablet {
         overflow: hidden;
@@ -73,17 +100,24 @@
     &__button {
       display: none;
 
-      @include onDesktop {
-        padding: 16px 54px;
+      @include onTablet {
+        display: block;
         border-radius: 54px;
         background: $dark-orange;
         color: $white;
         font-weight: 700;
         margin: 0 auto;
-        display: block;
-        height: min-content;
+        height: 43px;
         position: relative;
         z-index: 2;
+        width: 162px;
+        font-size: 12px;
+      }
+
+      @include onDesktop {
+        width: 216px;
+        height: 58px;
+        font-size: 16px;
       }
     }
     &__item {
@@ -148,6 +182,10 @@
 
       &--last {
         right: 78px;
+      }
+
+      @include onTablet {
+        top: -170px;
       }
 
       @include onDesktop {

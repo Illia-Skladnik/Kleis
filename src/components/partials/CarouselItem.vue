@@ -17,6 +17,11 @@
       font-size: 26px;
       margin: 0 0 23px 0;
 
+      @include onTablet {
+         font-size: 24px;
+         margin: 0 0 22px 0;
+      }
+
       @include onDesktop {
          font-size: 32px;
          margin: 0 0 29px 0;
@@ -25,6 +30,10 @@
    .industries__paragraph {
       font-size: 14px;
 
+      @include onTablet {
+         font-size: 12px;
+      }
+
       @include onDesktop {
          font-size: 16px;
       }
@@ -32,7 +41,6 @@
 </style>
 
 <template>
-   <!-- <div class="industries__item" :style="transform: translate(pos, 0, 0);"> -->
    <div class="industries__item">
       <h3 class="industries__h3">{{ item.title }}</h3>
       <p class="industries__paragraph">{{ item.text }}</p>
@@ -40,10 +48,5 @@
 </template>
 
 <script setup>
-   // defineProps(['item', 'pos'])
    defineProps(['item'])
-
-   // defineEmits(['pos'])
-
-   // console.log(pos)
 </script>

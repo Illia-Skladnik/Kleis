@@ -2,16 +2,19 @@
   @import '@/assets/styles/variables.scss';
   @import '@/assets/styles/_mixins.scss';
   .key {
-
     &--wrapper {
       max-width: 1322px;
       padding-left: 24px;
     }
 
-    // width: 342px;
+    @include onTablet {
+      width: 769px;
+      margin: 0 auto;
+    }
 
     @include onDesktop {
       width: 1233px;
+      margin: 0;
     }
 
     &__title {
@@ -23,8 +26,15 @@
 
       margin-bottom: 21px;
 
+      @include onTablet {
+        font-size: 29px;
+        margin-bottom: 17px;
+        line-height: auto;
+      }
+
       @include onDesktop {
         margin-bottom: 28px;
+        font-size: 45px;
       }
     }
 
@@ -34,6 +44,14 @@
 
       color: $dark;
       font-size: 14px;
+
+      @include onTablet {
+        font-size: 10px;
+      }
+
+      @include onDesktop {
+        font-size: 16px;
+      }
     }
   }
 </style>

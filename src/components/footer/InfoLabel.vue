@@ -1,5 +1,6 @@
 <style scoped lang="scss">
   @import '@/assets/styles/variables.scss';
+  @import '@/assets/styles/_mixins.scss';
   .info {
     position: relative;
 
@@ -7,6 +8,16 @@
       width: 912px;
       height: 721px;
       bottom: 588px;
+
+      @include onTablet {
+        width: 579px;
+        height: 458px;
+      }
+
+      @include onDesktop {
+        width: 912px;
+        height: 721px;
+      }
     }
 
     &__msg-sign {

@@ -38,10 +38,6 @@
         width: 100%;
 
       }
-
-      @include onDesktop {
-
-      }
     }
 
     &__menu-policy-contact-flex {
@@ -67,19 +63,11 @@
         flex-direction: row;
       }
 
-      @include onDesktop {
-
-      }
-
       p:first-of-type {
         margin: 0 0 15px 0;
 
         @include onTablet {
           margin: 0;
-        }
-
-        @include onDesktop {
-
         }
       }
 
@@ -88,10 +76,6 @@
 
         @include onTablet {
           margin: 0 45px 0 0;
-        }
-
-        @include onDesktop {
-
         }
       }
     }
@@ -130,10 +114,6 @@
       @include onTablet {
         margin: 0;
         order: 2;
-      }
-
-      @include onDesktop {
-
       }
     }
 
@@ -200,14 +180,15 @@
         overflow: hidden;
 
         @include onTablet {
-          top: -580px;
-
-          height: 580px;
-          width: 100%;
+          top: -556px;
+          width: 326px;
+          height: 458px;
         }
 
         @include onDesktop {
-
+          top: -580px;
+          height: 580px;
+          width: 100%;
         }
       }
     }

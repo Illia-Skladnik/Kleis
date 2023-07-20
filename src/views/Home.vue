@@ -39,6 +39,14 @@
       height: 747;
       z-index: 1;
 
+      @include onTablet {
+        width: 589px;
+        height: 561px;
+
+        top: 188px;
+        left: 613px;
+      }
+
       @include onDesktop {
         width: 723px;
         height: 721px;
@@ -48,7 +56,7 @@
       }
 
       &--mobile {
-        @include onDesktop {
+        @include onTablet {
           display: none;
         }
       }
@@ -56,7 +64,7 @@
       &--desktop {
         display: none;
 
-        @include onDesktop {
+        @include onTablet {
           display: block;
         }
       }
@@ -79,25 +87,48 @@
 
     &__group77 {
       position: absolute;
-      width: 723px;
-      height: 721px;
-      left: -432px;
-      bottom: -711px;
       display: none;
 
-      @include onDesktop {
+      @include onTablet {
         display: block;
+
+        width: 542px;
+        height: 541px;
+        // z-index: 999;
+
+        left: -339px;
+        bottom: -606px;
+      }
+
+      @include onDesktop {
+        // display: block;
+        width: 723px;
+        height: 721px;
+        left: -432px;
+        bottom: -711px;
+        width: 723px;
+        height: 721px;
       }
     }
 
     &__group79 {
       display: none;
 
-      @include onDesktop {
+      @include onTablet {
         position: absolute;
+        display: block;
+        height: 314px;
+        width: 143px;
+
+        bottom: -230px;
+        right: 158px;
+      }
+
+      @include onDesktop {
         right: 182px;
         bottom: -365px;
-        display: block;
+        height: 518px;
+        width: 225px;
       }
     }
 
