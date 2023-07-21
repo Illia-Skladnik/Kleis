@@ -162,7 +162,7 @@
 </template>
 
 <script setup>
-  const firstAdvantage = new URL('@/assets/images/firstAdvantage.png', import.meta.url);
-  const secondAdvantage = new URL('@/assets/images/secondAdvantage.png', import.meta.url);
-  const thirdAdvantage = new URL('@/assets/images/thirdAdvantage.png', import.meta.url);
+  const firstAdvantage = new URL('@/assets/images/firstAdvantage.svg', import.meta.url);
+  const secondAdvantage = new URL('@/assets/images/secondAdvantage.svg', import.meta.url);
+  const thirdAdvantage = new URL('@/assets/images/thirdAdvantage.svg', import.meta.url);
 </script>

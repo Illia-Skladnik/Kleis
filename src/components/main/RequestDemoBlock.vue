@@ -115,7 +115,9 @@
 <script setup>
   import RequestDemo from '@/components/partials/RequestDemo.vue';
 
-  const group82 = new URL('@/assets/images/mobile/group82.png', import.meta.url);
-  const group57 = new URL('@/assets/images/desktop/group57.png', import.meta.url);
-  const group123 = new URL('@/assets/images/tablet/group123.png', import.meta.url);
+  const group82 = new URL('@/assets/images/mobile/group82.svg', import.meta.url);
+  const group57 = new URL('@/assets/images/desktop/group57.svg', import.meta.url);
+  const group123 = new URL('@/assets/images/tablet/group123.svg', import.meta.url);
+
+
 </script>

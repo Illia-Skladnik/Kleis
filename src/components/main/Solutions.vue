@@ -253,7 +253,7 @@
       : dots.value[num] = !dots.value[num]
   );
 
-  const background = new URL('@/assets/images/solutionsBackground.png', import.meta.url);
+  const background = new URL('@/assets/images/solutionsBackground.svg', import.meta.url);
   const dotActive = new URL('@/assets/svg/dotActive.svg', import.meta.url);
   const dotInactive = new URL('@/assets/svg/dotInactive.svg', import.meta.url);
 </script>

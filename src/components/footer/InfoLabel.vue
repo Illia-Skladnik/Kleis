@@ -52,7 +52,7 @@
 <script setup>
   import messageSign from '@/assets/svg/messageSign.svg'
 
-  const label = new URL('@/assets/images/vector2.png', import.meta.url);
+  const label = new URL('@/assets/images/vector2.svg', import.meta.url);
 
   function sendEmail() {
     const emailAddress = 'info@kleis.com';

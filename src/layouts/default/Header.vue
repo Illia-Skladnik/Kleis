@@ -233,10 +233,10 @@
   import DiscoverSolutions from '@/components/partials/DiscoverSolutions.vue';
   import RequestDemo from '@/components/partials/RequestDemo.vue';
   import NavBar from './NavBar.vue';
-  import {useRoute} from 'vue-router'
-  import {computed} from 'vue'
+  import { useRoute } from 'vue-router'
+  import { computed } from 'vue'
 
-  const headerBackground = new URL('@/assets/images/wide/bg_desktop.png', import.meta.url);
+  const headerBackground = new URL('@/assets/images/wide/bg_desktop.svg', import.meta.url);
   const route = useRoute();
   const path = computed(() => route.path);
 </script>

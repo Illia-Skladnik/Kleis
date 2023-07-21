@@ -133,5 +133,5 @@
   import { useNavBarModal } from '@/store/NavBarModal';
 
   const navBarModal = useNavBarModal();
-  const headerBackground = new URL('@/assets/images/wide/bg_desktop.png', import.meta.url);
+  const headerBackground = new URL('@/assets/images/wide/bg_desktop.svg', import.meta.url);
 </script>

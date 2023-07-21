@@ -170,8 +170,9 @@
   import Industries from '@/components/main/Industries.vue';
   import KeyToBusiness from '@/components/main/KeyToBusiness.vue';
 
-  const group78Mobile = new URL('@/assets/images/mobile/group92.png', import.meta.url);
-  const group78Desktop = new URL('@/assets/images/desktop/group78.png', import.meta.url);
-  const group77 = new URL('@/assets/images/desktop/group77.png', import.meta.url);
-  const group79 = new URL('@/assets/images/desktop/group79.png', import.meta.url);
+  const group78Mobile = new URL('@/assets/images/mobile/group92.svg', import.meta.url);
+  const group78Desktop = new URL('@/assets/images/desktop/group78.svg', import.meta.url);
+  const group77 = new URL('@/assets/images/desktop/group77.svg', import.meta.url);
+  const group79 = new URL('@/assets/images/desktop/group79.svg', import.meta.url);
+  
 </script>
