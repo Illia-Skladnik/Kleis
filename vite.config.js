@@ -10,7 +10,7 @@ import { resolve, dirname } from 'node:path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: '/Kleis/',
+  base: '/Kleis/',
   plugins: [
     vue({
       template: { transformAssetUrls }
