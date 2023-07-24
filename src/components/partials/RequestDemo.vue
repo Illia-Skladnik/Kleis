@@ -8,6 +8,10 @@
     font-weight: 700;
     transition-duration: 200ms;
     color: $light-silver;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
       background-color: $light-silver;
@@ -17,13 +21,9 @@
 </style>
 
 <template>
-  <button class="request-demo" :onclick="handleClick">
-    Request a demo
-  </button>
+  <router-link to="/contacts" class="request-demo">Request a demo</router-link>
 </template>
 
 <script setup>
-  function handleClick() {
-    window.scrollTo({ top: document.body.clientHeight, behavior: 'smooth' })
-  }
+
 </script>

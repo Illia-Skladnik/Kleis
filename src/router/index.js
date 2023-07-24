@@ -35,13 +35,19 @@ const routes = [
         name: 'TermsOfServices',
         component: () => import('@/views/TermsOfServices.vue'),
       },
+
+      {
+        path: '/contacts',
+        name: 'Contacts',
+        component: () => import('@/views/Contacts.vue'),
+      },
     ],
   },
 ]
 
 const router = createRouter({
-  // history: createWebHistory(process.env.BASE_URL),
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(process.env.BASE_URL),
+  // history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 })
 

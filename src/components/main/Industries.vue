@@ -10,9 +10,7 @@
       max-width: 1197px;
       min-height: 669px;
       margin: 0 auto;
-      // @extend %d-f-sb;
       display: flex;
-      // justify-content: space-between;
       flex-direction: column;
 
       padding: 108px 0 59px 0;
@@ -52,7 +50,6 @@
       margin: 0 0 60px 0;
       position: relative;
       z-index: 2;
-      font-weight: 400;
       padding-left: 24px;
 
       color: $dark-blue;
@@ -185,7 +182,7 @@
       }
 
       @include onTablet {
-        top: -170px;
+        top: -90px;
       }
 
       @include onDesktop {

@@ -140,7 +140,7 @@
       display: none;
 
       @include onTablet {
-        display: block;
+        display: flex;
         margin-right: 17px;
         width: 121px;
         height: 34px;
@@ -222,6 +222,10 @@
 
       <div class="header__privacy-block" v-if="path === '/terms-of-services'">
         <h1 class="header__privacy-block-title">Terms of Services</h1>
+      </div>
+
+      <div class="header__privacy-block" v-if="path === '/contacts'">
+        <h1 class="header__privacy-block-title">Contacts</h1>
       </div>
     </header>
   </div>
