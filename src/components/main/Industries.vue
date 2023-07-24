@@ -48,6 +48,7 @@
     &__h2 {
       font-size: 45px;
       margin: 0 0 60px 0;
+      width: fit-content;
       position: relative;
       z-index: 2;
       padding-left: 24px;
@@ -161,9 +162,25 @@
       right: 44px;
       bottom: 0;
 
+      @include onDesktop {
+        right: -17px;
+      }
+
+      @include onWide {
+        right: -586px;
+      }
+
       &--rotate {
         right: 150px;
         transform: rotate(180deg);
+
+        @include onDesktop {
+          right: 89px;
+        }
+
+        @include onWide {
+          right: -491px;
+        }
       }
 
       &--disabled {
@@ -175,18 +192,22 @@
         height: 23px;
         object-fit: cover;
         object-position: right;
+
+        @include onWide {
+          display: none;
+        }
       }
 
       &--last {
         right: 78px;
+
+        @include onDesktop {
+         right: 20px;
+        }
       }
 
       @include onTablet {
         top: -90px;
-      }
-
-      @include onDesktop {
-        display: none;
       }
     }
   }
