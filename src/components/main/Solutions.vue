@@ -51,7 +51,7 @@
           }
 
           .solutions__dots-block {
-            padding-top: 99px;
+            padding-top: 76px;
           }
         }
       }
@@ -157,7 +157,7 @@
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        padding-right: 35px;
+        padding-right: 25px;
         gap: 7px;
       }
     }
@@ -165,6 +165,14 @@
     &__dot-desktop {
       height: 16px;
       width: 16px;
+
+      @include onTablet {
+        margin-bottom: 12px;
+      }
+
+      @include onDesktop {
+        margin-top: 16px;
+      }
     }
   }
 </style>
