@@ -120,6 +120,10 @@
         margin-bottom: 4px;
         font-size: 32px;
       }
+
+      &--enterprise {
+        margin-left: -2px;
+      }
     }
 
     &__solution-description {
@@ -232,7 +236,7 @@
 
           <div class="solutions__solution">
             <div class="solutions__solution-top-item">
-              <h3 class="solutions__solution-title">Enterprise</h3>
+              <h3 class="solutions__solution-title solutions__solution-title--enterprise">Enterprise</h3>
               <img v-if="dots.third" :src="dotActive" alt="dot" class="solutions__dot">
               <img v-else :src="dotInactive" alt="dot" class="solutions__dot">
             </div>
