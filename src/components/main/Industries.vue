@@ -51,7 +51,6 @@
       width: fit-content;
       position: relative;
       z-index: 2;
-      padding-left: 24px;
 
       color: $dark-blue;
 
@@ -61,7 +60,6 @@
       }
 
       @include onDesktop {
-        padding-left: 0;
         margin: 0 0 48px 0;
         font-size: 48px;
       }
