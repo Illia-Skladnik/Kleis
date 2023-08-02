@@ -72,7 +72,7 @@
 
       @include onTablet {
         height: 141px;
-        margin: 0 0 83px 0;
+        margin: 0 0 42px 0;
       }
 
       @include onDesktop {
@@ -114,6 +114,10 @@
         width: 216px;
         height: 58px;
         font-size: 16px;
+      }
+
+      @include onWide {
+        display: none;
       }
     }
     &__item {

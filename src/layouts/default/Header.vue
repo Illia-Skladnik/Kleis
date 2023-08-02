@@ -101,24 +101,28 @@
       color: $light-silver;
       text-align: center;
       height: 40px;
+      width: 304px;
 
       text-align: center;
-      font-size: 12px;
+      font-size: 16px;
       font-style: normal;
       font-weight: 400;
-      line-height: 20px;
+      line-height: 26px;
       margin-bottom: 79px;
 
       @include onTablet {
-        font-size: 9px;
-        width: 231px;
+        height: 77px;
+        line-height: 25px;
+        width: 270px;
         margin: 0 auto 17px;
       }
 
       @include onDesktop {
         width: 400px;
         margin: 0 auto 30px;
-        font-size: 16px;
+        font-size: 20px;
+        line-height: 37px;
+        height: 111px;
       }
     }
 
